@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
 
 const Index = () => {
   const [currentService, setCurrentService] = useState(0);
@@ -13,49 +15,57 @@ const Index = () => {
       icon: Camera,
       title: "Photo Studio Rental",
       description: "Professional studio space with state-of-the-art lighting and equipment for your perfect shoot.",
-      color: "from-blue-500 to-purple-600"
+      color: "from-blue-500 to-purple-600",
+      path: "/photo-studio"
     },
     {
       icon: Video,
       title: "Photo/Video Shoot & Editing",
       description: "Complete production services from concept to final delivery with professional editing.",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
+      path: "/video-production"
     },
     {
       icon: Video,
       title: "Film & Ad Making",
       description: "Creative storytelling through compelling films and advertisements that capture your vision.",
-      color: "from-pink-500 to-red-600"
+      color: "from-pink-500 to-red-600",
+      path: "/video-production"
     },
     {
       icon: Palette,
       title: "Graphics Design & Branding",
       description: "Complete brand identity solutions including logos, packaging, and visual communication.",
-      color: "from-red-500 to-orange-600"
+      color: "from-red-500 to-orange-600",
+      path: "/graphics-branding"
     },
     {
       icon: Globe,
       title: "Website Development",
       description: "Modern, responsive websites that drive engagement and convert visitors into customers.",
-      color: "from-orange-500 to-yellow-600"
+      color: "from-orange-500 to-yellow-600",
+      path: "/web-development"
     },
     {
       icon: TrendingUp,
       title: "Digital Marketing",
       description: "Strategic digital campaigns that amplify your brand and drive measurable results.",
-      color: "from-yellow-500 to-green-600"
+      color: "from-yellow-500 to-green-600",
+      path: "/digital-marketing"
     },
     {
       icon: Share2,
       title: "Social Media Handling",
       description: "Complete social media management to build your online presence and engage your audience.",
-      color: "from-green-500 to-teal-600"
+      color: "from-green-500 to-teal-600",
+      path: "/social-media"
     },
     {
       icon: Search,
       title: "Search Engine Optimization",
       description: "Improve your online visibility and rank higher in search results with our SEO expertise.",
-      color: "from-teal-500 to-blue-600"
+      color: "from-teal-500 to-blue-600",
+      path: "/seo-services"
     }
   ];
 
@@ -68,7 +78,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
@@ -95,9 +105,11 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
-              Explore Our Services
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
+                Explore Our Services
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full backdrop-blur-sm">
               View Portfolio
             </Button>
@@ -126,26 +138,27 @@ const Index = () => {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <Card 
-                  key={index}
-                  className={`bg-gradient-to-br ${service.color} p-1 rounded-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group cursor-pointer ${
-                    index === currentService ? 'ring-4 ring-white/50 scale-105' : ''
-                  }`}
-                >
-                  <CardContent className="bg-slate-900/90 backdrop-blur-sm rounded-xl p-6 h-full">
-                    <div className="flex flex-col items-center text-center h-full">
-                      <div className={`bg-gradient-to-br ${service.color} p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-8 h-8 text-white" />
+                <Link key={index} to={service.path}>
+                  <Card 
+                    className={`bg-gradient-to-br ${service.color} p-1 rounded-2xl hover:shadow-2xl transition-all duration-500 hover:scale-105 group cursor-pointer ${
+                      index === currentService ? 'ring-4 ring-white/50 scale-105' : ''
+                    }`}
+                  >
+                    <CardContent className="bg-slate-900/90 backdrop-blur-sm rounded-xl p-6 h-full">
+                      <div className="flex flex-col items-center text-center h-full">
+                        <div className={`bg-gradient-to-br ${service.color} p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
+                          {service.description}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gray-100 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors flex-grow">
-                        {service.description}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               );
             })}
           </div>
@@ -217,23 +230,14 @@ const Index = () => {
             </div>
           </div>
 
-          <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
-            Get In Touch
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
+              Get In Touch
+            </Button>
+          </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900/80 backdrop-blur-sm border-t border-white/10 py-12 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">KGMI Digital Studio</h3>
-          <p className="text-gray-400 mb-6">Transforming Ideas Into Visual Excellence</p>
-          <p className="text-gray-500 text-sm">
-            © 2024 KGMI Digital Studio. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   );
 };
 
