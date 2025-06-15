@@ -21,6 +21,7 @@ import VisualEditor from "./pages/VisualEditor";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import BookingCancellationPolicy from "./pages/BookingCancellationPolicy";
+import DownloadFiles from "./pages/DownloadFiles";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/booking-cancellation-policy" element={<BookingCancellationPolicy />} />
+          <Route path="/download-files" element={<DownloadFiles />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
