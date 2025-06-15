@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Camera, Clock, Users, Wifi, Coffee, Car, Shield, CheckCircle, Star, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -229,8 +228,8 @@ const PhotoStudioRental = () => {
 
             <div className="relative">
               <img 
-                src="/lovable-uploads/fec97f4b-734f-455f-a362-75b4a43acf0f.png"
-                alt="Professional Birthday Cake Photography"
+                src="/lovable-uploads/8978e710-1374-4f42-a9d0-bd76b2930310.png"
+                alt="Professional Photography Equipment"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent rounded-2xl"></div>
