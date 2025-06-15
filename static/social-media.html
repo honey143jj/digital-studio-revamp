@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Management - KGMI Digital Studio</title>
+    <meta name="description" content="Professional social media management services in Jaipur. Content creation, community management, social media strategy, and brand building.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="text-2xl font-bold text-white">
+                    KGMI<span class="text-purple-500">.</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="relative group">
+                        <button class="text-purple-400 font-semibold hover:text-purple-300 transition-colors py-2 flex items-center gap-1">
+                            Services <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-slate-900 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-white/10">
+                            <div class="p-2 space-y-1">
+                                <a href="photo-studio.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="camera" class="w-5 h-5 text-purple-400"></i>
+                                        <div>
+                                            <div class="font-medium">Photo Studio</div>
+                                            <div class="text-xs text-gray-400">Professional photography services</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="photo-studio-rental.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="building" class="w-5 h-5 text-blue-400"></i>
+                                        <div>
+                                            <div class="font-medium">Studio Rental</div>
+                                            <div class="text-xs text-gray-400">Rent our professional studio</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="video-production.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="video" class="w-5 h-5 text-red-400"></i>
+                                        <div>
+                                            <div class="font-medium">Video Production</div>
+                                            <div class="text-xs text-gray-400">High-quality video content</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="graphics-branding.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="palette" class="w-5 h-5 text-pink-400"></i>
+                                        <div>
+                                            <div class="font-medium">Graphics & Branding</div>
+                                            <div class="text-xs text-gray-400">Creative design solutions</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="web-development.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="globe" class="w-5 h-5 text-green-400"></i>
+                                        <div>
+                                            <div class="font-medium">Web Development</div>
+                                            <div class="text-xs text-gray-400">Modern website solutions</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="digital-marketing.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="trending-up" class="w-5 h-5 text-orange-400"></i>
+                                        <div>
+                                            <div class="font-medium">Digital Marketing</div>
+                                            <div class="text-xs text-gray-400">Grow your online presence</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="social-media.html" class="block px-4 py-3 text-purple-400 bg-slate-800 rounded-md">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="share-2" class="w-5 h-5 text-blue-400"></i>
+                                        <div>
+                                            <div class="font-medium">Social Media</div>
+                                            <div class="text-xs text-gray-400">Social media management</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="seo-services.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-800 rounded-md transition-colors">
+                                    <div class="flex items-center gap-3">
+                                        <i data-lucide="search" class="w-5 h-5 text-teal-400"></i>
+                                        <div>
+                                            <div class="font-medium">SEO Services</div>
+                                            <div class="text-xs text-gray-400">Search engine optimization</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="gallery.html" class="text-white hover:text-purple-400 transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-white hover:text-purple-400 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20 pb-20">
+        <!-- Header -->
+        <section class="py-16 px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <a href="index.html" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-6 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    Back to Home
+                </a>
+                <h1 class="text-5xl font-bold text-white mb-6">Social Media Management</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Build a strong social media presence that engages your audience and grows your brand. 
+                    Strategic content creation and community management across all platforms.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-blue-500 to-purple-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="share-2" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Content Creation</h3>
+                        <p class="text-gray-400 mb-6">Engaging content that resonates with your audience and drives interaction.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Visual content design</li>
+                            <li>• Video content</li>
+                            <li>• Copywriting</li>
+                            <li>• Story creation</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-pink-500 to-red-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Platform Management</h3>
+                        <p class="text-gray-400 mb-6">Complete management across all major social media platforms.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Instagram</li>
+                            <li>• Facebook</li>
+                            <li>• Twitter</li>
+                            <li>• LinkedIn</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-green-500 to-blue-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Community Management</h3>
+                        <p class="text-gray-400 mb-6">Active engagement with your audience to build a loyal community.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Response management</li>
+                            <li>• Community engagement</li>
+                            <li>• Crisis management</li>
+                            <li>• Influencer outreach</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Content Planning</h3>
+                        <p class="text-gray-400 mb-6">Strategic content calendars that ensure consistent and timely posting.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Content calendar</li>
+                            <li>• Posting schedule</li>
+                            <li>• Campaign planning</li>
+                            <li>• Trend analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="target" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Paid Social Campaigns</h3>
+                        <p class="text-gray-400 mb-6">Targeted advertising campaigns that reach the right audience at the right time.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Ad campaign setup</li>
+                            <li>• Audience targeting</li>
+                            <li>• Budget optimization</li>
+                            <li>• Performance tracking</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                        <div class="bg-gradient-to-br from-teal-500 to-green-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <i data-lucide="bar-chart" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Analytics & Reporting</h3>
+                        <p class="text-gray-400 mb-6">Detailed insights and reports to track growth and optimize performance.</p>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Performance metrics</li>
+                            <li>• Growth tracking</li>
+                            <li>• Engagement analysis</li>
+                            <li>• ROI reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platforms -->
+        <section class="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-purple-900/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-6">Platforms We Manage</h2>
+                    <p class="text-xl text-gray-400">Expert management across all major social media platforms</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+                        <div class="bg-gradient-to-br from-pink-500 to-purple-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Instagram</h3>
+                        <p class="text-gray-400">Visual storytelling, Reels, Stories, and IGTV content management.</p>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="facebook" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Facebook</h3>
+                        <p class="text-gray-400">Page management, community building, and targeted advertising campaigns.</p>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+                        <div class="bg-gradient-to-br from-blue-400 to-blue-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">LinkedIn</h3>
+                        <p class="text-gray-400">Professional networking, B2B content, and thought leadership.</p>
+                    </div>
+
+                    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+                        <div class="bg-gradient-to-br from-blue-300 to-blue-500 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+                            <i data-lucide="twitter" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Twitter</h3>
+                        <p class="text-gray-400">Real-time engagement, trending topics, and brand conversations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-20 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Ready to Boost Your Social Presence?</h2>
+                <p class="text-xl text-gray-400 mb-10">
+                    Let's create a social media strategy that builds your brand and engages your audience. Contact us today to get started.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                        Start Your Campaign
+                    </a>
+                    <a href="digital-marketing.html" class="border-2 border-white/70 text-white hover:bg-white/20 px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300">
+                        Digital Marketing
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-16 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">KGMI<span class="text-purple-500">.</span></h3>
+                    <p class="text-gray-400 mb-4">
+                        Professional photography and digital services that bring your vision to life.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="photo-studio.html" class="text-gray-400 hover:text-white transition-colors">Photo Studio</a></li>
+                        <li><a href="video-production.html" class="text-gray-400 hover:text-white transition-colors">Video Production</a></li>
+                        <li><a href="graphics-branding.html" class="text-gray-400 hover:text-white transition-colors">Graphics & Branding</a></li>
+                        <li><a href="web-development.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            81, Shiv Colony, Vaishali Nagar, Jaipur
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            +91-9867226595
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            info@kgmi.net
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 KGMI Digital Studio. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="privacy-policy.html" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="text-gray-400 hover:text-white text-sm transition-colors">Terms & Conditions</a>
+                        <a href="booking-cancellation-policy.html" class="text-gray-400 hover:text-white text-sm transition-colors">Cancellation Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
