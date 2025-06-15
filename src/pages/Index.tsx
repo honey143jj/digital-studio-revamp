@@ -163,7 +163,7 @@ const Index = () => {
                 alt={slide.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/30"></div>
             </div>
           ))}
         </div>
@@ -197,21 +197,21 @@ const Index = () => {
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 z-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-spin-slow"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-full blur-3xl animate-spin-slow"></div>
         </div>
 
         <div className={`relative z-20 text-center px-4 max-w-6xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight text-shadow">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               KGMI
             </span>
           </h1>
-          <h2 className="text-2xl md:text-4xl text-gray-300 mb-8 font-light">
+          <h2 className="text-2xl md:text-4xl text-white mb-8 font-light text-shadow">
             {heroImages[currentSlide].title}
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed text-shadow">
             {heroImages[currentSlide].subtitle} - From concept to creation, 
             we deliver exceptional digital solutions that elevate your brand.
           </p>
@@ -235,7 +235,7 @@ const Index = () => {
           </div>
 
           {/* Additional Gallery CTA */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-2xl mx-auto">
+          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 max-w-2xl mx-auto">
             <p className="text-white mb-4 text-lg">
               🎯 See our professional studio and creative work
             </p>
