@@ -229,8 +229,8 @@ const PhotoStudioRental = () => {
 
             <div className="relative">
               <img 
-                src="/lovable-uploads/8978e710-1374-4f42-a9d0-bd76b2930310.png"
-                alt="Professional Photography Equipment"
+                src="/lovable-uploads/69dae017-282a-46ce-b273-39814d9a73ea.png"
+                alt="KGMI Professional Photography Studio"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent rounded-2xl"></div>
