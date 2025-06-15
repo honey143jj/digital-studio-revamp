@@ -1,6 +1,6 @@
-
 import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   const services = [
@@ -133,10 +133,38 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center">
-          <p className="text-gray-500">
-            © 2024 KGMI Digital Studio. All rights reserved. | Transforming Ideas Into Visual Excellence
-          </p>
+        <div className="border-t border-white/10 mt-12 pt-8">
+          {/* Policy Links */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-1 mb-6">
+            <Link 
+              to="/privacy-policy" 
+              className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Separator orientation="vertical" className="hidden sm:block h-4 bg-gray-600" />
+            <span className="text-gray-600 sm:hidden">|</span>
+            <Link 
+              to="/terms-conditions" 
+              className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+            >
+              Terms & Conditions
+            </Link>
+            <Separator orientation="vertical" className="hidden sm:block h-4 bg-gray-600" />
+            <span className="text-gray-600 sm:hidden">|</span>
+            <Link 
+              to="/booking-cancellation-policy" 
+              className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+            >
+              Booking & Cancellation Policy
+            </Link>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-500">
+              © 2024 KGMI Digital Studio. All rights reserved. | Transforming Ideas Into Visual Excellence
+            </p>
+          </div>
         </div>
       </div>
     </footer>
