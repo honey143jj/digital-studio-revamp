@@ -13,14 +13,20 @@ const Gallery = () => {
   const categories = [
     { id: "all", name: "All Work", icon: Camera },
     { id: "studio", name: "Studio", icon: Camera },
-    { id: "photography", name: "Photography", icon: Camera },
+    { id: "family", name: "Family Photography", icon: Camera },
+    { id: "fashion", name: "Fashion Photography", icon: Camera },
+    { id: "kids", name: "Kids Photography", icon: Camera },
+    { id: "wedding", name: "Wedding Photography", icon: Camera },
+    { id: "product", name: "Product Photography", icon: Camera },
+    { id: "traditional", name: "Traditional Photography", icon: Camera },
+    { id: "creative", name: "Creative Photography", icon: Camera },
     { id: "video", name: "Video Production", icon: Video },
     { id: "branding", name: "Branding", icon: Palette },
     { id: "web", name: "Web Design", icon: Globe },
   ];
 
   const galleryItems = [
-    // Studio Images (Your uploaded images)
+    // Studio Images (Original KGMI studio images)
     {
       id: 1,
       image: "/lovable-uploads/ba1c2ab9-a23c-4f2d-8d44-2b3a8cddb82d.png",
@@ -63,30 +69,87 @@ const Gallery = () => {
       category: "studio",
       description: "Comfortable client viewing area with studio workspace"
     },
-    // Additional sample work
+    // New uploaded photography samples
     {
       id: 7,
-      image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Product Photography",
-      category: "photography",
-      description: "Professional product showcase for luxury brand"
+      image: "/lovable-uploads/a671f0e3-f7e4-4969-8175-bdac75ce1958.png",
+      title: "Beautiful Family Moments",
+      category: "family",
+      description: "Heartwarming family photography capturing love and togetherness"
     },
     {
       id: 8,
+      image: "/lovable-uploads/74f1d783-5fc2-4dda-aa4c-99f724cbf40f.png",
+      title: "Fashion & Portrait Excellence",
+      category: "fashion",
+      description: "Professional fashion photography with stunning lighting and composition"
+    },
+    {
+      id: 9,
+      image: "/lovable-uploads/bfc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      title: "Creative Kids Photography",
+      category: "kids",
+      description: "Fun and creative children photography with colorful backdrops"
+    },
+    {
+      id: 10,
+      image: "/lovable-uploads/4ed5767b-7d1b-4431-ab25-eaf92509c011.png",
+      title: "Artistic Portrait with Natural Light",
+      category: "creative",
+      description: "Beautiful portrait photography using natural lighting techniques"
+    },
+    {
+      id: 11,
+      image: "/lovable-uploads/6fc71aee-bbc7-41ee-86e3-5dd6b37ad67f.png",
+      title: "Traditional Dance Photography",
+      category: "traditional",
+      description: "Capturing the grace and beauty of traditional dance performances"
+    },
+    {
+      id: 12,
+      image: "/lovable-uploads/9a9b9252-78b7-43f1-8851-9560324c9b48.png",
+      title: "Premium Product Photography",
+      category: "product",
+      description: "High-end jewelry and product photography with professional lighting"
+    },
+    {
+      id: 13,
+      image: "/lovable-uploads/fbc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      title: "Creative Visual Effects",
+      category: "creative",
+      description: "Innovative photography with special effects and creative lighting"
+    },
+    {
+      id: 14,
+      image: "/lovable-uploads/f83f37fd-a872-4d9c-8795-2f3b59498396.png",
+      title: "Elegant Wedding Photography",
+      category: "wedding",
+      description: "Beautiful wedding photography capturing special moments and traditions"
+    },
+    // Additional sample work
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Corporate Product Showcase",
+      category: "product",
+      description: "Professional product showcase for luxury brand"
+    },
+    {
+      id: 16,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Corporate Video",
+      title: "Corporate Video Production",
       category: "video",
       description: "Brand story video for tech startup"
     },
     {
-      id: 9,
+      id: 17,
       image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Brand Identity",
+      title: "Brand Identity Design",
       category: "branding",
       description: "Complete brand package for restaurant chain"
     },
     {
-      id: 10,
+      id: 18,
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "E-commerce Website",
       category: "web",

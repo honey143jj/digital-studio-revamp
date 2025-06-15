@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Eye, ArrowRight } from "lucide-react";
+import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Eye, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -8,7 +8,59 @@ import Layout from "@/components/Layout";
 
 const Index = () => {
   const [currentService, setCurrentService] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  const heroImages = [
+    {
+      id: 1,
+      image: "/lovable-uploads/a671f0e3-f7e4-4969-8175-bdac75ce1958.png",
+      title: "Family Photography",
+      subtitle: "Capturing precious family moments"
+    },
+    {
+      id: 2,
+      image: "/lovable-uploads/74f1d783-5fc2-4dda-aa4c-99f724cbf40f.png",
+      title: "Fashion Photography",
+      subtitle: "Professional fashion and portrait shoots"
+    },
+    {
+      id: 3,
+      image: "/lovable-uploads/bfc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      title: "Kids Photography",
+      subtitle: "Creative and fun children photography"
+    },
+    {
+      id: 4,
+      image: "/lovable-uploads/4ed5767b-7d1b-4431-ab25-eaf92509c011.png",
+      title: "Professional Portraits",
+      subtitle: "Artistic portrait photography with professional lighting"
+    },
+    {
+      id: 5,
+      image: "/lovable-uploads/6fc71aee-bbc7-41ee-86e3-5dd6b37ad67f.png",
+      title: "Traditional Dance Photography",
+      subtitle: "Cultural and traditional photography"
+    },
+    {
+      id: 6,
+      image: "/lovable-uploads/9a9b9252-78b7-43f1-8851-9560324c9b48.png",
+      title: "Product Photography",
+      subtitle: "Professional product and jewelry photography"
+    },
+    {
+      id: 7,
+      image: "/lovable-uploads/fbc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      title: "Creative Photography",
+      subtitle: "Innovative and artistic visual concepts"
+    },
+    {
+      id: 8,
+      image: "/lovable-uploads/f83f37fd-a872-4d9c-8795-2f3b59498396.png",
+      title: "Wedding Photography",
+      subtitle: "Beautiful wedding and celebration photography"
+    }
+  ];
 
   const services = [
     {
@@ -71,24 +123,76 @@ const Index = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
+    const serviceInterval = setInterval(() => {
       setCurrentService((prev) => (prev + 1) % services.length);
     }, 4000);
-    return () => clearInterval(interval);
+
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(serviceInterval);
+      clearInterval(slideInterval);
+    };
   }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section with Image Slider */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Hero Background Image */}
+        {/* Hero Image Slider */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Digital Studio Setup"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+          {heroImages.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img 
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Slider Navigation */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Slider Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/50'
+              }`}
+            />
+          ))}
         </div>
         
         {/* Animated Background Elements */}
@@ -105,10 +209,10 @@ const Index = () => {
             </span>
           </h1>
           <h2 className="text-2xl md:text-4xl text-gray-300 mb-8 font-light">
-            Digital Studio & Creative Agency
+            {heroImages[currentSlide].title}
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Transforming ideas into stunning visual experiences. From concept to creation, 
+            {heroImages[currentSlide].subtitle} - From concept to creation, 
             we deliver exceptional digital solutions that elevate your brand.
           </p>
           
@@ -140,13 +244,6 @@ const Index = () => {
                 Browse Gallery →
               </Button>
             </Link>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
