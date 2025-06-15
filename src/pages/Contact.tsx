@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,6 +32,16 @@ const Contact = () => {
     }
   ];
 
+  const scrollToContactInfo = () => {
+    const contactSection = document.getElementById('contact-info-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -59,7 +70,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 px-4">
+      <section id="contact-info-section" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => {
@@ -78,6 +89,16 @@ const Contact = () => {
                 </Card>
               );
             })}
+          </div>
+          
+          {/* Get Project Quote Button - Made more visible */}
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-12 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+            >
+              Get Project Quote
+            </Button>
           </div>
         </div>
       </section>
@@ -151,10 +172,19 @@ const Contact = () => {
             we're here to help bring your creative vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full">
+            <Button 
+              size="lg" 
+              onClick={scrollToContactInfo}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full"
+            >
               Schedule Consultation
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
+            <Button 
+              onClick={scrollToContactInfo}
+              variant="outline" 
+              size="lg" 
+              className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full"
+            >
               Get Project Quote
             </Button>
           </div>
