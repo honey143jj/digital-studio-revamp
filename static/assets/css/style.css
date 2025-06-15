@@ -1,5 +1,5 @@
 
-/* Custom styles for KGMI Digital Studio */
+/* Custom styles for KGMI Digital Studio - Exact match to React version */
 
 /* Smooth scrolling */
 html {
@@ -11,7 +11,18 @@ html {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Animation classes */
+/* Loading state */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Animation classes - Exact match to React version */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -43,8 +54,30 @@ html {
     }
 }
 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate-fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .animate-slide-in-right {
@@ -53,6 +86,15 @@ html {
 
 .animate-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+/* Text shadow utility */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Custom scrollbar */
@@ -73,7 +115,29 @@ html {
     background: #4f46e5;
 }
 
-/* Gallery styles */
+/* Hero section enhancements */
+.hero-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Service cards hover effects */
+.service-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.service-card .group-hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+/* Gallery styles - Exact match */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -222,7 +286,7 @@ html {
     color: #94a3b8;
 }
 
-/* Button styles */
+/* Button styles - Enhanced for exact match */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -255,6 +319,89 @@ html {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Navigation enhancements */
+nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Hero slider enhancements */
+.slide {
+    transition: opacity 1000ms ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide:not(.active) {
+    opacity: 0;
+}
+
+/* Indicator animations */
+.indicator {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Enhanced gradient backgrounds */
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+/* Custom hover effects for links */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Enhanced backdrop blur */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Service card ring effect */
+.ring-4 {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced transform effects */
+.transform {
+    transform: var(--tw-transform);
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.scale-105 {
+    transform: scale(1.05);
+}
+
+/* Enhanced transitions */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
 /* Responsive utilities */
 @media (max-width: 768px) {
     .gallery-grid {
@@ -269,35 +416,116 @@ html {
         max-width: 95vw;
         max-height: 85vh;
     }
-}
-
-/* Loading animation */
-.loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Hero section parallax effect */
-.hero-bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media (max-width: 768px) {
+    
     .hero-bg {
         background-attachment: scroll;
     }
+    
+    .animate-fade-in-up {
+        animation-duration: 0.4s;
+    }
+}
+
+/* Enhanced mobile navigation */
+@media (max-width: 1024px) {
+    #mobile-menu {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(12px);
+        border-radius: 0.75rem;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* Enhanced focus states */
+button:focus,
+a:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Enhanced shadow effects */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Gradient text effect */
+.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.text-transparent {
+    color: transparent;
+}
+
+/* Additional animations for enhanced experience */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced gradient animations */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+/* Final enhancements for exact match */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+}
+
+.group:hover .group-hover\:text-gray-100 {
+    color: #f3f4f6;
+}
+
+.group:hover .group-hover\:text-gray-300 {
+    color: #d1d5db;
+}
+
+/* Ensure proper z-index stacking */
+.z-10 {
+    z-index: 10;
+}
+
+.z-20 {
+    z-index: 20;
+}
+
+.z-30 {
+    z-index: 30;
+}
+
+.z-50 {
+    z-index: 50;
 }

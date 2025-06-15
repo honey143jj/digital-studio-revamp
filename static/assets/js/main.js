@@ -1,202 +1,269 @@
 
-// Main JavaScript for KGMI Digital Studio
-
+// Initialize Lucide icons
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Lucide icons
     lucide.createIcons();
     
-    // Mobile menu functionality
+    // Initialize all functionality
+    initializeSlider();
+    initializeNavigation();
+    initializeServices();
+    initializeGallery();
+    initializeAnimations();
+    initializeScrollEffects();
+});
+
+// Hero Image Slider
+let currentSlide = 0;
+let slideInterval;
+let isVisible = false;
+
+const heroData = [
+    {
+        title: "Family Photography",
+        subtitle: "Capturing precious family moments"
+    },
+    {
+        title: "Fashion Photography", 
+        subtitle: "Professional fashion and portrait shoots"
+    },
+    {
+        title: "Kids Photography",
+        subtitle: "Creative and fun children photography"
+    },
+    {
+        title: "Professional Portraits",
+        subtitle: "Artistic portrait photography with professional lighting"
+    }
+];
+
+function initializeSlider() {
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    const heroTitle = document.getElementById('hero-title');
+    const heroSubtitle = document.getElementById('hero-subtitle');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    
+    if (!slides.length) return;
+
+    // Auto-slide functionality
+    slideInterval = setInterval(() => {
+        nextSlide();
+    }, 5000);
+
+    // Manual navigation
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Indicator navigation
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    function goToSlide(index) {
+        // Hide current slide
+        slides[currentSlide].classList.remove('active');
+        slides[currentSlide].classList.add('opacity-0');
+        indicators[currentSlide].classList.remove('active');
+        indicators[currentSlide].classList.add('bg-white/50');
+        indicators[currentSlide].classList.remove('bg-white');
+
+        // Update current slide
+        currentSlide = index;
+
+        // Show new slide
+        slides[currentSlide].classList.add('active');
+        slides[currentSlide].classList.remove('opacity-0');
+        indicators[currentSlide].classList.add('active');
+        indicators[currentSlide].classList.remove('bg-white/50');
+        indicators[currentSlide].classList.add('bg-white');
+
+        // Update text content
+        if (heroTitle && heroSubtitle && heroData[currentSlide]) {
+            heroTitle.textContent = heroData[currentSlide].title;
+            heroSubtitle.innerHTML = `${heroData[currentSlide].subtitle} - From concept to creation, we deliver exceptional digital solutions that elevate your brand.`;
+        }
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        goToSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(prevIndex);
+    }
+
+    // Initialize visibility animation
+    setTimeout(() => {
+        isVisible = true;
+        const heroContent = document.querySelector('.animate-fade-in-up');
+        if (heroContent) {
+            heroContent.style.opacity = '1';
+            heroContent.style.transform = 'translateY(0)';
+        }
+    }, 100);
+}
+
+// Navigation functionality
+function initializeNavigation() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
     }
+}
+
+// Services animation
+let currentService = 0;
+function initializeServices() {
+    const serviceCards = document.querySelectorAll('.service-card');
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    // Initialize galleries if present
-    initializeGallery();
-    
-    // Initialize contact form if present
-    initializeContactForm();
-    
-    // Add scroll animations
-    addScrollAnimations();
-});
+    if (serviceCards.length) {
+        setInterval(() => {
+            // Remove highlight from current service
+            serviceCards[currentService].classList.remove('ring-4', 'ring-white/50', 'scale-105');
+            
+            // Move to next service
+            currentService = (currentService + 1) % serviceCards.length;
+            
+            // Highlight new service
+            serviceCards[currentService].classList.add('ring-4', 'ring-white/50', 'scale-105');
+        }, 4000);
+    }
+}
 
 // Gallery functionality
 function initializeGallery() {
     const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            openLightbox(index);
+        });
+    });
+}
+
+let currentLightboxIndex = 0;
+let lightboxImages = [];
+
+function openLightbox(index) {
+    currentLightboxIndex = index;
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const lightboxPrev = document.getElementById('lightbox-prev');
-    const lightboxNext = document.getElementById('lightbox-next');
     
-    if (!galleryItems.length || !lightbox) return;
-    
-    let currentImageIndex = 0;
-    let images = Array.from(galleryItems).map(item => ({
-        src: item.querySelector('img').src,
-        title: item.querySelector('img').alt
-    }));
-    
-    // Open lightbox
-    galleryItems.forEach((item, index) => {
-        item.addEventListener('click', function() {
-            currentImageIndex = index;
-            openLightbox();
-        });
-    });
-    
-    // Close lightbox
-    if (lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-    }
-    
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
-    
-    // Navigation
-    if (lightboxPrev) {
-        lightboxPrev.addEventListener('click', function() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            updateLightboxImage();
-        });
-    }
-    
-    if (lightboxNext) {
-        lightboxNext.addEventListener('click', function() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            updateLightboxImage();
-        });
-    }
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (!lightbox.classList.contains('active')) return;
-        
-        switch(e.key) {
-            case 'Escape':
-                closeLightbox();
-                break;
-            case 'ArrowLeft':
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                updateLightboxImage();
-                break;
-            case 'ArrowRight':
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                updateLightboxImage();
-                break;
-        }
-    });
-    
-    function openLightbox() {
+    if (lightbox && lightboxImg) {
+        lightboxImages = Array.from(document.querySelectorAll('.gallery-item img')).map(img => img.src);
+        lightboxImg.src = lightboxImages[index];
         lightbox.classList.add('active');
-        updateLightboxImage();
         document.body.style.overflow = 'hidden';
     }
-    
-    function closeLightbox() {
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
         lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    function updateLightboxImage() {
-        if (lightboxImg && images[currentImageIndex]) {
-            lightboxImg.src = images[currentImageIndex].src;
-            lightboxImg.alt = images[currentImageIndex].title;
-        }
+        document.body.style.overflow = 'auto';
     }
 }
 
-// Gallery filtering
-function filterGallery(category) {
-    const items = document.querySelectorAll('.gallery-item');
-    const buttons = document.querySelectorAll('.filter-btn');
-    
-    // Update active button
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.filter === category) {
-            btn.classList.add('active');
-        }
-    });
-    
-    // Filter items
-    items.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
-            item.style.display = 'block';
-            setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'scale(1)';
-            }, 50);
-        } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.8)';
-            setTimeout(() => {
-                item.style.display = 'none';
-            }, 300);
-        }
+function nextLightboxImage() {
+    currentLightboxIndex = (currentLightboxIndex + 1) % lightboxImages.length;
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightboxImg) {
+        lightboxImg.src = lightboxImages[currentLightboxIndex];
+    }
+}
+
+function prevLightboxImage() {
+    currentLightboxIndex = (currentLightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightboxImg) {
+        lightboxImg.src = lightboxImages[currentLightboxIndex];
+    }
+}
+
+// Animation initialization
+function initializeAnimations() {
+    // Add fade-in animation to elements as they come into view
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for animation
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
     });
 }
 
-// Contact form functionality
-function initializeContactForm() {
-    const contactForm = document.getElementById('contact-form');
+// Scroll effects
+function initializeScrollEffects() {
+    // Smooth scroll to services section
+    window.scrollToServices = function() {
+        const servicesSection = document.getElementById('services-section');
+        if (servicesSection) {
+            servicesSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+}
+
+// Contact form handling
+function handleContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
     
-    if (!contactForm) return;
-    
-    contactForm.addEventListener('submit', async function(e) {
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
+        // Get form data
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
         
         // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
         submitBtn.innerHTML = '<span class="loading"></span> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual form handling)
-        try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
+        // Simulate form submission (replace with actual implementation)
+        setTimeout(() => {
+            // Reset form
+            form.reset();
             
-            // Show success message
-            showNotification('Message sent successfully!', 'success');
-            contactForm.reset();
-        } catch (error) {
-            // Show error message
-            showNotification('Failed to send message. Please try again.', 'error');
-        } finally {
             // Reset button
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }
+            
+            // Show success message
+            showNotification('Thank you! Your message has been sent successfully.', 'success');
+        }, 2000);
     });
 }
 
 // Notification system
 function showNotification(message, type = 'info') {
+    // Create notification element
     const notification = document.createElement('div');
-    notification.className = `fixed top-4 right-4 p-4 rounded-lg text-white z-50 transform translate-x-full transition-transform duration-300 ${
+    notification.className = `fixed top-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-white transform translate-x-full transition-transform duration-300 ${
         type === 'success' ? 'bg-green-600' : 
         type === 'error' ? 'bg-red-600' : 
         'bg-blue-600'
@@ -205,41 +272,18 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // Animate in
+    // Show notification
     setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
+        notification.classList.remove('translate-x-full');
     }, 100);
     
-    // Animate out and remove
+    // Hide notification after 5 seconds
     setTimeout(() => {
-        notification.style.transform = 'translateX(full)';
+        notification.classList.add('translate-x-full');
         setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
+            document.body.removeChild(notification);
         }, 300);
-    }, 3000);
-}
-
-// Scroll animations
-function addScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in-up');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe elements for animation
-    document.querySelectorAll('.service-card, .gallery-item, .stat-item').forEach(el => {
-        observer.observe(el);
-    });
+    }, 5000);
 }
 
 // Utility functions
@@ -255,19 +299,47 @@ function debounce(func, wait) {
     };
 }
 
-// Window resize handler
-window.addEventListener('resize', debounce(function() {
+// Performance optimization
+window.addEventListener('load', () => {
+    // Remove loading class if exists
+    document.body.classList.remove('loading');
+});
+
+// Handle resize events
+window.addEventListener('resize', debounce(() => {
     // Reinitialize components that need resize handling
     lucide.createIcons();
 }, 250));
 
-// Page visibility change handler
-document.addEventListener('visibilitychange', function() {
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox && lightbox.classList.contains('active')) {
+        switch(e.key) {
+            case 'Escape':
+                closeLightbox();
+                break;
+            case 'ArrowLeft':
+                prevLightboxImage();
+                break;
+            case 'ArrowRight':
+                nextLightboxImage();
+                break;
+        }
+    }
+});
+
+// Handle page visibility change
+document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-        // Page is hidden
-        console.log('Page hidden');
+        // Pause animations when page is not visible
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
     } else {
-        // Page is visible
-        lucide.createIcons();
+        // Resume animations when page becomes visible
+        if (typeof initializeSlider === 'function') {
+            initializeSlider();
+        }
     }
 });
