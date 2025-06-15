@@ -12,6 +12,7 @@ const Gallery = () => {
 
   const categories = [
     { id: "all", name: "All Work", icon: Camera },
+    { id: "studio", name: "Studio", icon: Camera },
     { id: "photography", name: "Photography", icon: Camera },
     { id: "video", name: "Video Production", icon: Video },
     { id: "branding", name: "Branding", icon: Palette },
@@ -19,47 +20,77 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
+    // Studio Images (Your uploaded images)
     {
       id: 1,
+      image: "/lovable-uploads/ba1c2ab9-a23c-4f2d-8d44-2b3a8cddb82d.png",
+      title: "KGMI Studio - Main Area",
+      category: "studio",
+      description: "Professional studio space with green screen and professional lighting setup"
+    },
+    {
+      id: 2,
+      image: "/lovable-uploads/198574a8-eb11-47b9-8c3b-263efbecf2f7.png",
+      title: "KGMI Studio - Recording Setup",
+      category: "studio",
+      description: "Studio recording area with branded backdrop and professional equipment"
+    },
+    {
+      id: 3,
+      image: "/lovable-uploads/0eaf578d-58fe-4add-a7a4-46080ee7dce8.png",
+      title: "KGMI Digital Studio Reception",
+      category: "studio",
+      description: "Studio reception area with KGMI branding and client displays"
+    },
+    {
+      id: 4,
+      image: "/lovable-uploads/4262f254-f9fb-40bf-86cc-27b0808ff238.png",
+      title: "KGMI Studio - Production Area",
+      category: "studio",
+      description: "Professional production space with branded displays and equipment"
+    },
+    {
+      id: 5,
+      image: "/lovable-uploads/aa4e3c8f-1d1e-4941-8b77-6b64a60640c8.png",
+      title: "KGMI Studio - Green Screen Setup",
+      category: "studio",
+      description: "Advanced green screen studio with Godox professional lighting equipment"
+    },
+    {
+      id: 6,
+      image: "/lovable-uploads/bbaac003-12b7-44b8-a848-1ef8d609d724.png",
+      title: "KGMI Studio - Client Area",
+      category: "studio",
+      description: "Comfortable client viewing area with studio workspace"
+    },
+    // Additional sample work
+    {
+      id: 7,
       image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Product Photography",
       category: "photography",
       description: "Professional product showcase for luxury brand"
     },
     {
-      id: 2,
+      id: 8,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Corporate Video",
       category: "video",
       description: "Brand story video for tech startup"
     },
     {
-      id: 3,
+      id: 9,
       image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Brand Identity",
       category: "branding",
       description: "Complete brand package for restaurant chain"
     },
     {
-      id: 4,
+      id: 10,
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "E-commerce Website",
       category: "web",
       description: "Modern online store with seamless UX"
-    },
-    {
-      id: 5,
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Corporate Portraits",
-      category: "photography",
-      description: "Executive headshots for Fortune 500 company"
-    },
-    {
-      id: 6,
-      image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Commercial Video",
-      category: "video",
-      description: "High-impact advertisement campaign"
     },
   ];
 
@@ -80,7 +111,7 @@ const Gallery = () => {
             <h1 className="text-5xl font-bold text-white mb-6">Our Gallery</h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Explore our portfolio of creative work across photography, video production, 
-              branding, and digital experiences.
+              branding, and digital experiences. Take a look inside our professional studio.
             </p>
           </div>
         </section>

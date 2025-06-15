@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Eye } from "lucide-react";
+import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Eye, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -112,7 +112,7 @@ const Index = () => {
             we deliver exceptional digital solutions that elevate your brand.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <Link to="/contact">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
                 Explore Our Services
@@ -120,12 +120,24 @@ const Index = () => {
             </Link>
             <Link to="/gallery">
               <Button 
-                variant="outline" 
                 size="lg" 
-                className="border-2 border-white/70 text-white hover:bg-white/20 hover:border-white bg-white/10 backdrop-blur-sm px-8 py-4 text-lg rounded-full flex items-center gap-2 font-semibold shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <Eye className="w-5 h-5" />
-                View Gallery
+                View Our Gallery
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Additional Gallery CTA */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-2xl mx-auto">
+            <p className="text-white mb-4 text-lg">
+              🎯 See our professional studio and creative work
+            </p>
+            <Link to="/gallery">
+              <Button variant="outline" className="border-white/70 text-white hover:bg-white/20 px-6 py-2 rounded-full">
+                Browse Gallery →
               </Button>
             </Link>
           </div>
@@ -197,7 +209,7 @@ const Index = () => {
                 From our fully-equipped photo studio to cutting-edge digital marketing strategies, 
                 we provide end-to-end solutions that help brands stand out in today's competitive landscape.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6 mb-6">
                 <div className="text-center">
                   <h3 className="text-3xl font-bold text-purple-400 mb-2">500+</h3>
                   <p className="text-gray-400">Projects Completed</p>
@@ -207,6 +219,11 @@ const Index = () => {
                   <p className="text-gray-400">Happy Clients</p>
                 </div>
               </div>
+              <Link to="/gallery">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-full">
+                  See Our Work →
+                </Button>
+              </Link>
             </div>
             
             <div className="relative">
