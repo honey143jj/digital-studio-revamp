@@ -144,6 +144,16 @@ const Index = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section with Image Slider */}
@@ -216,11 +226,13 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-            <Link to="/contact">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
-                Explore Our Services
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              onClick={scrollToServices}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              Explore Our Services
+            </Button>
             <Link to="/gallery">
               <Button 
                 size="lg" 
@@ -238,7 +250,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 relative">
+      <section id="services-section" className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">Our Services</h2>
