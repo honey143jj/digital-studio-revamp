@@ -13,6 +13,7 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import SocialMedia from "./pages/SocialMedia";
 import SEOServices from "./pages/SEOServices";
 import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/social-media" element={<SocialMedia />} />
           <Route path="/seo-services" element={<SEOServices />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
