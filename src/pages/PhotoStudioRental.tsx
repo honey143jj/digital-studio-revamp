@@ -93,7 +93,7 @@ const PhotoStudioRental = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80"
+            src="/lovable-uploads/69dae017-282a-46ce-b273-39814d9a73ea.png"
             alt="Professional Photo Studio"
             className="w-full h-full object-cover"
           />
