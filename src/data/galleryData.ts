@@ -325,76 +325,76 @@ export const galleryItems = [
     description: "Happy child playing ukulele in casual white attire"
   },
 
-  // Wedding Photography
+  // Wedding Photography (NEW UPLOADED IMAGES)
   {
     id: 47,
-    image: "/lovable-uploads/f83f37fd-a872-4d9c-8795-2f3b59498396.png",
-    title: "Elegant Wedding Photography",
+    image: "/lovable-uploads/a7239a35-1cb0-41c4-b514-6591795f593e.png",
+    title: "Bridal Lehenga Twirl",
     category: "wedding",
-    description: "Beautiful wedding photography capturing special moments and traditions"
+    description: "Stunning bride in pink embellished lehenga captured in graceful motion"
   },
   {
     id: 48,
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Wedding Ceremony",
+    image: "/lovable-uploads/7d40c794-a92f-4a53-bb3e-acc65e536a5f.png",
+    title: "Intimate Wedding Moment",
     category: "wedding",
-    description: "Sacred wedding ceremony moments captured"
+    description: "Beautiful black and white portrait of bride with traditional jewelry"
   },
   {
     id: 49,
-    image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Bridal Portrait",
+    image: "/lovable-uploads/c465a264-c963-4528-8759-993b410e2e93.png",
+    title: "Bridal Portrait Elegance",
     category: "wedding",
-    description: "Stunning bridal portrait photography"
+    description: "Elegant bride in traditional attire with intricate details and jewelry"
   },
   {
     id: 50,
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Wedding Reception",
+    image: "/lovable-uploads/53083053-4c0d-4255-a739-d7388bf03c0b.png",
+    title: "Pre-Wedding Celebration",
     category: "wedding",
-    description: "Joyful wedding reception celebrations"
+    description: "Joyful bride with traditional maang tikka and elegant jewelry"
   },
   {
     id: 51,
-    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Couple's First Dance",
+    image: "/lovable-uploads/2e88b1a8-3296-4914-89bf-90d7450a4384.png",
+    title: "Traditional Wedding Dance",
     category: "wedding",
-    description: "Romantic first dance photography"
+    description: "Vibrant bride performing traditional dance in colorful attire"
   },
   {
     id: 52,
-    image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Wedding Details",
+    image: "/lovable-uploads/bc3c4e17-ee2e-4da6-8077-8e10fa9984e9.png",
+    title: "Wedding Ceremony Rituals",
     category: "wedding",
-    description: "Beautiful wedding detail photography"
+    description: "Sacred wedding rituals captured with artistic lighting and composition"
   },
   {
     id: 53,
-    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Outdoor Wedding",
+    image: "/lovable-uploads/28d24719-6a32-49e9-a271-c16a7de17e05.png",
+    title: "Sacred Wedding Ceremony",
     category: "wedding",
-    description: "Beautiful outdoor wedding ceremony"
+    description: "Traditional Hindu wedding ceremony with bride and groom in ornate attire"
   },
   {
     id: 54,
-    image: "https://images.unsplash.com/photo-1589990183450-10d4e2a5902f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Wedding Party",
+    image: "/lovable-uploads/f1f96571-0b62-4911-a839-09b8b266e662.png",
+    title: "Bridal Portrait with Heritage Jewelry",
     category: "wedding",
-    description: "Fun wedding party group photography"
+    description: "Exquisite bridal portrait showcasing traditional gold jewelry and attire"
   },
   {
     id: 55,
-    image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Traditional Wedding",
+    image: "/lovable-uploads/e3abdf95-529c-4453-91c8-4b8163d8c0f2.png",
+    title: "Wedding Celebration Joy",
     category: "wedding",
-    description: "Traditional wedding ceremony photography"
+    description: "Happy couple celebrating their wedding with flower garlands and smiles"
   },
   {
     id: 56,
-    image: "https://images.unsplash.com/photo-1511900683039-c820d4a4d74d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Wedding Rings",
+    image: "/lovable-uploads/165363da-ffaf-44eb-9cda-f44a879e1186.png",
+    title: "Wedding Fire Ceremony",
     category: "wedding",
-    description: "Close-up wedding ring photography"
+    description: "Sacred fire ceremony during traditional Indian wedding celebration"
   },
 
   // Product Photography

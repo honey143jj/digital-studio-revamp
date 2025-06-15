@@ -51,6 +51,9 @@ const Gallery = () => {
         <LightboxModal 
           selectedImage={selectedImage}
           onClose={() => setSelectedImage(null)}
+          currentCategory={selectedCategory}
+          galleryItems={galleryItems}
+          onImageChange={setSelectedImage}
         />
       </div>
     </Layout>
