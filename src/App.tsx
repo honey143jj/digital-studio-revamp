@@ -14,6 +14,8 @@ import SocialMedia from "./pages/SocialMedia";
 import SEOServices from "./pages/SEOServices";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
