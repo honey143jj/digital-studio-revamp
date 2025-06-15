@@ -58,10 +58,18 @@ const AdminDashboard = () => {
             </div>
             <h1 className="text-2xl font-bold text-white">KGMI Admin Panel</h1>
           </div>
-          <Button onClick={handleLogout} variant="outline" className="border-white/20 text-white hover:bg-white/10">
-            <LogOut className="w-4 h-4 mr-2" />
-            Logout
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button 
+              onClick={() => navigate('/admin/visual-editor')}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+            >
+              Visual Editor
+            </Button>
+            <Button onClick={handleLogout} variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <LogOut className="w-4 h-4 mr-2" />
+              Logout
+            </Button>
+          </div>
         </div>
       </header>
 
