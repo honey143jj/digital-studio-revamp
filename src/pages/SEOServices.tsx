@@ -1,7 +1,7 @@
-
 import { Search, TrendingUp, Target, BarChart, CheckCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const SEOServices = () => {
@@ -78,9 +78,11 @@ const SEOServices = () => {
             Improve your online visibility and rank higher in search results with our 
             comprehensive SEO strategies that drive organic traffic and qualified leads.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 text-white px-8 py-4 text-lg rounded-full">
-            Improve Rankings
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 text-white px-8 py-4 text-lg rounded-full">
+              Improve Rankings
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -227,13 +229,12 @@ const SEOServices = () => {
           <p className="text-xl text-gray-400 mb-10">
             Get a free SEO audit and discover how to improve your search rankings
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 px-8 py-4 text-lg rounded-full">
-              Free SEO Audit
-            </Button>
-            <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
-              View Results
-            </Button>
+          <div className="flex justify-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 px-8 py-4 text-lg rounded-full">
+                Free SEO Audit
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
