@@ -16,7 +16,6 @@ export const categories = [
 ];
 
 export const galleryItems = [
-  // Studio Images (Original KGMI studio images)
   {
     id: 1,
     image: "/lovable-uploads/ba1c2ab9-a23c-4f2d-8d44-2b3a8cddb82d.png",
@@ -87,8 +86,6 @@ export const galleryItems = [
     category: "studio",
     description: "Versatile creative workspace for various projects"
   },
-
-  // Family Photography (New uploaded images)
   {
     id: 11,
     image: "/lovable-uploads/e340a959-6717-4641-a323-8f2d6576afb5.png",
@@ -138,8 +135,6 @@ export const galleryItems = [
     category: "family",
     description: "Natural outdoor family photography in beautiful garden setting"
   },
-
-  // Fashion Photography
   {
     id: 21,
     image: "/lovable-uploads/74f1d783-5fc2-4dda-aa4c-99f724cbf40f.png",
@@ -210,8 +205,6 @@ export const galleryItems = [
     category: "fashion",
     description: "Beauty and fashion portrait combination"
   },
-
-  // Kids Photography (ALL uploaded images combined)
   {
     id: 31,
     image: "/lovable-uploads/f2f96339-1c79-4df5-862d-2c017a551f94.png",
@@ -324,8 +317,6 @@ export const galleryItems = [
     category: "kids",
     description: "Happy child playing ukulele in casual white attire"
   },
-
-  // Wedding Photography (Previous + New uploaded images)
   {
     id: 47,
     image: "/lovable-uploads/a7239a35-1cb0-41c4-b514-6591795f593e.png",
@@ -396,7 +387,6 @@ export const galleryItems = [
     category: "wedding",
     description: "Sacred fire ceremony during traditional Indian wedding celebration"
   },
-  // NEW WEDDING IMAGES
   {
     id: 117,
     image: "/lovable-uploads/9c49b4ad-756e-471e-8484-de56b9a98053.png",
@@ -453,8 +443,6 @@ export const galleryItems = [
     category: "wedding",
     description: "Elegant bridal portrait showcasing traditional makeup and jewelry"
   },
-
-  // Product Photography (NEW UPLOADED IMAGES)
   {
     id: 57,
     image: "/lovable-uploads/9c811ee1-2a63-4b3a-b86d-300a2d25e5d1.png",
@@ -525,8 +513,76 @@ export const galleryItems = [
     category: "product",
     description: "Natural product photography featuring organic groundnut oil with nuts and traditional wooden elements"
   },
-
-  // Traditional Photography
+  {
+    id: 125,
+    image: "/lovable-uploads/9318fe55-84c5-4ebf-8603-7cbb8c897ba3.png",
+    title: "Mustard Oil Product Photography",
+    category: "product",
+    description: "Professional product photography of mustard oil bottle with mustard seeds and traditional wooden elements"
+  },
+  {
+    id: 126,
+    image: "/lovable-uploads/5b3afaa8-5960-4385-997a-43676698cc0c.png",
+    title: "Sesame Oil Product Photography",
+    category: "product",
+    description: "High-quality product photography of sesame oil bottle with sesame seeds and jute sack"
+  },
+  {
+    id: 127,
+    image: "/lovable-uploads/148d3750-ce4c-4967-80ce-6a44b1b47a60.png",
+    title: "Coconut Oil Product Photography",
+    category: "product",
+    description: "Creative product photography of coconut oil bottle with fresh coconut pieces in dynamic composition"
+  },
+  {
+    id: 128,
+    image: "/lovable-uploads/1103e157-b75d-4aaa-b095-bd75138fbe0b.png",
+    title: "Pitbull Platinum Shaver",
+    category: "product",
+    description: "Premium electric shaver product photography showcasing the multi-head design and luxury branding"
+  },
+  {
+    id: 129,
+    image: "/lovable-uploads/a422be05-71cc-4f9f-90fc-45b7c5822918.png",
+    title: "Royal Canin Persian Cat Food",
+    category: "product",
+    description: "Professional pet food product photography featuring Persian cats with their specialized nutrition"
+  },
+  {
+    id: 130,
+    image: "/lovable-uploads/0df047db-2a20-44a6-86f5-3ddbc702d04f.png",
+    title: "Spices Collection Photography",
+    category: "product",
+    description: "Artistic food product photography featuring red chilli, fennel, turmeric, and coriander spices"
+  },
+  {
+    id: 131,
+    image: "/lovable-uploads/c4d0eb53-b075-4f38-b4cd-12559c651fb0.png",
+    title: "Premium Headphones Photography",
+    category: "product",
+    description: "High-end audio equipment product photography with elegant lighting and modern styling"
+  },
+  {
+    id: 132,
+    image: "/lovable-uploads/12cc1363-af93-48ed-8dd5-3ba2902e1425.png",
+    title: "Modern Workspace Setup",
+    category: "product",
+    description: "Clean and minimal product photography of workspace essentials with pink aesthetic background"
+  },
+  {
+    id: 133,
+    image: "/lovable-uploads/2544c6a0-6422-45ad-ae70-b4f5914126d7.png",
+    title: "Black Headphones on Yellow",
+    category: "product",
+    description: "Bold product photography of black headphones on vibrant yellow background"
+  },
+  {
+    id: 134,
+    image: "/lovable-uploads/4c04be03-f6eb-4e2e-b48a-f980a02ffed4.png",
+    title: "Ray-Ban Sunglasses Photography",
+    category: "product",
+    description: "Classic sunglasses product photography with clean composition and dramatic shadows"
+  },
   {
     id: 67,
     image: "/lovable-uploads/6fc71aee-bbc7-41ee-86e3-5dd6b37ad67f.png",
@@ -597,8 +653,6 @@ export const galleryItems = [
     category: "traditional",
     description: "Traditional cultural portrait photography"
   },
-
-  // Creative Photography
   {
     id: 77,
     image: "/lovable-uploads/4ed5767b-7d1b-4431-ab25-eaf92509c011.png",
@@ -669,8 +723,6 @@ export const galleryItems = [
     category: "creative",
     description: "Unique artistic vision and creative expression"
   },
-
-  // Video Production
   {
     id: 87,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -741,8 +793,6 @@ export const galleryItems = [
     category: "video",
     description: "Cinematic style video production and storytelling"
   },
-
-  // Branding
   {
     id: 97,
     image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -813,8 +863,6 @@ export const galleryItems = [
     category: "branding",
     description: "Digital brand experience and online presence"
   },
-
-  // Web Design
   {
     id: 107,
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
