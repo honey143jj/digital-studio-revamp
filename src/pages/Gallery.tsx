@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ArrowLeft, Camera, Video, Palette, Globe, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,91 +69,754 @@ const Gallery = () => {
       category: "studio",
       description: "Comfortable client viewing area with studio workspace"
     },
-    // New uploaded photography samples
+    // Additional Studio Images
     {
       id: 7,
+      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Professional Photography Studio",
+      category: "studio",
+      description: "Modern photography studio with professional lighting equipment"
+    },
+    {
+      id: 8,
+      image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Video Production Studio",
+      category: "studio",
+      description: "State-of-the-art video production facility"
+    },
+    {
+      id: 9,
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Recording Studio Setup",
+      category: "studio",
+      description: "Professional audio and video recording environment"
+    },
+    {
+      id: 10,
+      image: "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Creative Studio Space",
+      category: "studio",
+      description: "Versatile creative workspace for various projects"
+    },
+
+    // Family Photography (10 images)
+    {
+      id: 11,
       image: "/lovable-uploads/a671f0e3-f7e4-4969-8175-bdac75ce1958.png",
       title: "Beautiful Family Moments",
       category: "family",
       description: "Heartwarming family photography capturing love and togetherness"
     },
     {
-      id: 8,
+      id: 12,
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Happy Family Portrait",
+      category: "family",
+      description: "Beautiful outdoor family portrait session"
+    },
+    {
+      id: 13,
+      image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Family Fun Time",
+      category: "family",
+      description: "Candid family moments filled with joy and laughter"
+    },
+    {
+      id: 14,
+      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Generational Portrait",
+      category: "family",
+      description: "Three generations captured in a timeless portrait"
+    },
+    {
+      id: 15,
+      image: "https://images.unsplash.com/photo-1566454544243-de0a88b36923?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Family Beach Session",
+      category: "family",
+      description: "Natural family photography at the beach"
+    },
+    {
+      id: 16,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Loving Family Embrace",
+      category: "family",
+      description: "Tender moments between family members"
+    },
+    {
+      id: 17,
+      image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Family Adventure",
+      category: "family",
+      description: "Active family enjoying outdoor adventures together"
+    },
+    {
+      id: 18,
+      image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Cozy Family Moment",
+      category: "family",
+      description: "Intimate family portrait in a cozy setting"
+    },
+    {
+      id: 19,
+      image: "https://images.unsplash.com/photo-1609902726285-00668009f004?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Family Celebration",
+      category: "family",
+      description: "Special family celebration moments captured"
+    },
+    {
+      id: 20,
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Family Heritage",
+      category: "family",
+      description: "Traditional family portrait with cultural elements"
+    },
+
+    // Fashion Photography (10 images)
+    {
+      id: 21,
       image: "/lovable-uploads/74f1d783-5fc2-4dda-aa4c-99f724cbf40f.png",
       title: "Fashion & Portrait Excellence",
       category: "fashion",
       description: "Professional fashion photography with stunning lighting and composition"
     },
     {
-      id: 9,
+      id: 22,
+      image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "High Fashion Portrait",
+      category: "fashion",
+      description: "Elegant high fashion photography with dramatic lighting"
+    },
+    {
+      id: 23,
+      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Street Fashion Style",
+      category: "fashion",
+      description: "Urban fashion photography with contemporary styling"
+    },
+    {
+      id: 24,
+      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Fashion Model Portfolio",
+      category: "fashion",
+      description: "Professional model portfolio photography"
+    },
+    {
+      id: 25,
+      image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Editorial Fashion Shoot",
+      category: "fashion",
+      description: "Magazine-style editorial fashion photography"
+    },
+    {
+      id: 26,
+      image: "https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Studio Fashion Portrait",
+      category: "fashion",
+      description: "Controlled studio fashion photography session"
+    },
+    {
+      id: 27,
+      image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Luxury Fashion Style",
+      category: "fashion",
+      description: "High-end luxury fashion photography"
+    },
+    {
+      id: 28,
+      image: "https://images.unsplash.com/photo-1506629905607-21e4b7e9d800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Fashion Accessories",
+      category: "fashion",
+      description: "Stylish fashion accessories photography"
+    },
+    {
+      id: 29,
+      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Creative Fashion Art",
+      category: "fashion",
+      description: "Artistic fashion photography with creative elements"
+    },
+    {
+      id: 30,
+      image: "https://images.unsplash.com/photo-1465145498025-928c7a71cab9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Fashion Beauty Portrait",
+      category: "fashion",
+      description: "Beauty and fashion portrait combination"
+    },
+
+    // Kids Photography (10 images)
+    {
+      id: 31,
       image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
       title: "Creative Kids Photography",
       category: "kids",
       description: "Fun and creative children photography with colorful backdrops"
     },
     {
-      id: 10,
-      image: "/lovable-uploads/4ed5767b-7d1b-4431-ab25-eaf92509c011.png",
-      title: "Artistic Portrait with Natural Light",
-      category: "creative",
-      description: "Beautiful portrait photography using natural lighting techniques"
+      id: 32,
+      image: "https://images.unsplash.com/photo-1560131914-b927d6f13ab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Happy Child Portrait",
+      category: "kids",
+      description: "Joyful children's portrait photography"
     },
     {
-      id: 11,
-      image: "/lovable-uploads/6fc71aee-bbc7-41ee-86e3-5dd6b37ad67f.png",
-      title: "Traditional Dance Photography",
-      category: "traditional",
-      description: "Capturing the grace and beauty of traditional dance performances"
+      id: 33,
+      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Kids Playing Outdoors",
+      category: "kids",
+      description: "Natural outdoor children photography"
     },
     {
-      id: 12,
+      id: 34,
+      image: "https://images.unsplash.com/photo-1548699667-6966ac4189c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Baby's First Year",
+      category: "kids",
+      description: "Beautiful baby and newborn photography"
+    },
+    {
+      id: 35,
+      image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Children's Birthday Party",
+      category: "kids",
+      description: "Fun birthday celebration photography"
+    },
+    {
+      id: 36,
+      image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Siblings Bond",
+      category: "kids",
+      description: "Sweet sibling photography capturing their bond"
+    },
+    {
+      id: 37,
+      image: "https://images.unsplash.com/photo-1566257052949-cdac2fc7e01c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Kids Summer Fun",
+      category: "kids",
+      description: "Children enjoying summer activities"
+    },
+    {
+      id: 38,
+      image: "https://images.unsplash.com/photo-1536640712-1e5ac2d36dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "School Age Portraits",
+      category: "kids",
+      description: "Professional school-age children portraits"
+    },
+    {
+      id: 39,
+      image: "https://images.unsplash.com/photo-1606791422814-b32c705e3e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Kids Creative Play",
+      category: "kids",
+      description: "Children engaged in creative play activities"
+    },
+    {
+      id: 40,
+      image: "https://images.unsplash.com/photo-1518743312178-6c3e3d2e6a45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Kids Fashion Shoot",
+      category: "kids",
+      description: "Stylish children's fashion photography"
+    },
+
+    // Wedding Photography (10 images)
+    {
+      id: 41,
+      image: "/lovable-uploads/f83f37fd-a872-4d9c-8795-2f3b59498396.png",
+      title: "Elegant Wedding Photography",
+      category: "wedding",
+      description: "Beautiful wedding photography capturing special moments and traditions"
+    },
+    {
+      id: 42,
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Wedding Ceremony",
+      category: "wedding",
+      description: "Sacred wedding ceremony moments captured"
+    },
+    {
+      id: 43,
+      image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Bridal Portrait",
+      category: "wedding",
+      description: "Stunning bridal portrait photography"
+    },
+    {
+      id: 44,
+      image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Wedding Reception",
+      category: "wedding",
+      description: "Joyful wedding reception celebrations"
+    },
+    {
+      id: 45,
+      image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Couple's First Dance",
+      category: "wedding",
+      description: "Romantic first dance photography"
+    },
+    {
+      id: 46,
+      image: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Wedding Details",
+      category: "wedding",
+      description: "Beautiful wedding detail photography"
+    },
+    {
+      id: 47,
+      image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Outdoor Wedding",
+      category: "wedding",
+      description: "Beautiful outdoor wedding ceremony"
+    },
+    {
+      id: 48,
+      image: "https://images.unsplash.com/photo-1589990183450-10d4e2a5902f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Wedding Party",
+      category: "wedding",
+      description: "Fun wedding party group photography"
+    },
+    {
+      id: 49,
+      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Traditional Wedding",
+      category: "wedding",
+      description: "Traditional wedding ceremony photography"
+    },
+    {
+      id: 50,
+      image: "https://images.unsplash.com/photo-1511900683039-c820d4a4d74d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Wedding Rings",
+      category: "wedding",
+      description: "Close-up wedding ring photography"
+    },
+
+    // Product Photography (10 images)
+    {
+      id: 51,
       image: "/lovable-uploads/9a9b9252-78b7-43f1-8851-9560324c9b48.png",
       title: "Premium Product Photography",
       category: "product",
       description: "High-end jewelry and product photography with professional lighting"
     },
     {
-      id: 13,
-      image: "/lovable-uploads/fbc6ad72-6095-42e0-8ecf-397399ddfb15.png",
-      title: "Creative Visual Effects",
-      category: "creative",
-      description: "Innovative photography with special effects and creative lighting"
-    },
-    {
-      id: 14,
-      image: "/lovable-uploads/f83f37fd-a872-4d9c-8795-2f3b59498396.png",
-      title: "Elegant Wedding Photography",
-      category: "wedding",
-      description: "Beautiful wedding photography capturing special moments and traditions"
-    },
-    // Additional sample work
-    {
-      id: 15,
+      id: 52,
       image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Corporate Product Showcase",
       category: "product",
       description: "Professional product showcase for luxury brand"
     },
     {
-      id: 16,
+      id: 53,
+      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Tech Product Photography",
+      category: "product",
+      description: "Modern technology product photography"
+    },
+    {
+      id: 54,
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Fashion Product Shoot",
+      category: "product",
+      description: "Stylish fashion products and accessories"
+    },
+    {
+      id: 55,
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Food Product Photography",
+      category: "product",
+      description: "Delicious food and beverage product photography"
+    },
+    {
+      id: 56,
+      image: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Beauty Product Shoot",
+      category: "product",
+      description: "Elegant beauty and cosmetic product photography"
+    },
+    {
+      id: 57,
+      image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Home Decor Products",
+      category: "product",
+      description: "Stylish home decoration product photography"
+    },
+    {
+      id: 58,
+      image: "https://images.unsplash.com/photo-1585633434967-a0f5b3c87ce9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Lifestyle Product Shoot",
+      category: "product",
+      description: "Products in lifestyle and usage contexts"
+    },
+    {
+      id: 59,
+      image: "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Luxury Product Line",
+      category: "product",
+      description: "High-end luxury product photography"
+    },
+    {
+      id: 60,
+      image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "E-commerce Products",
+      category: "product",
+      description: "Clean e-commerce product photography"
+    },
+
+    // Traditional Photography (10 images)
+    {
+      id: 61,
+      image: "/lovable-uploads/6fc71aee-bbc7-41ee-86e3-5dd6b37ad67f.png",
+      title: "Traditional Dance Photography",
+      category: "traditional",
+      description: "Capturing the grace and beauty of traditional dance performances"
+    },
+    {
+      id: 62,
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Cultural Heritage",
+      category: "traditional",
+      description: "Traditional cultural ceremonies and rituals"
+    },
+    {
+      id: 63,
+      image: "https://images.unsplash.com/photo-1516981879613-95e2890a0a63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Traditional Costume",
+      category: "traditional",
+      description: "Beautiful traditional costume photography"
+    },
+    {
+      id: 64,
+      image: "https://images.unsplash.com/photo-1536431311719-398b6704d4cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Festival Photography",
+      category: "traditional",
+      description: "Vibrant traditional festival celebrations"
+    },
+    {
+      id: 65,
+      image: "https://images.unsplash.com/photo-1544967919-d8b57d974e6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Traditional Music",
+      category: "traditional",
+      description: "Traditional music and instrument photography"
+    },
+    {
+      id: 66,
+      image: "https://images.unsplash.com/photo-1601292793517-526f0ac83ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Cultural Events",
+      category: "traditional",
+      description: "Important cultural event documentation"
+    },
+    {
+      id: 67,
+      image: "https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Traditional Art",
+      category: "traditional",
+      description: "Traditional art and craft photography"
+    },
+    {
+      id: 68,
+      image: "https://images.unsplash.com/photo-1504575188573-e7a93bd1ecf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Heritage Buildings",
+      category: "traditional",
+      description: "Traditional architecture and heritage sites"
+    },
+    {
+      id: 69,
+      image: "https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Traditional Ceremonies",
+      category: "traditional",
+      description: "Sacred traditional ceremony photography"
+    },
+    {
+      id: 70,
+      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Cultural Portraits",
+      category: "traditional",
+      description: "Traditional cultural portrait photography"
+    },
+
+    // Creative Photography (10 images)
+    {
+      id: 71,
+      image: "/lovable-uploads/4ed5767b-7d1b-4431-ab25-eaf92509c011.png",
+      title: "Artistic Portrait with Natural Light",
+      category: "creative",
+      description: "Beautiful portrait photography using natural lighting techniques"
+    },
+    {
+      id: 72,
+      image: "/lovable-uploads/fbc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      title: "Creative Visual Effects",
+      category: "creative",
+      description: "Innovative photography with special effects and creative lighting"
+    },
+    {
+      id: 73,
+      image: "https://images.unsplash.com/photo-1455165814004-1126a7199f9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Abstract Photography",
+      category: "creative",
+      description: "Abstract and conceptual photography art"
+    },
+    {
+      id: 74,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Creative Portraits",
+      category: "creative",
+      description: "Artistic and creative portrait photography"
+    },
+    {
+      id: 75,
+      image: "https://images.unsplash.com/photo-1556855810-d6a26d5e4dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Light Painting Art",
+      category: "creative",
+      description: "Creative light painting photography techniques"
+    },
+    {
+      id: 76,
+      image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Surreal Photography",
+      category: "creative",
+      description: "Surreal and fantasy photography compositions"
+    },
+    {
+      id: 77,
+      image: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Double Exposure Art",
+      category: "creative",
+      description: "Creative double exposure photography techniques"
+    },
+    {
+      id: 78,
+      image: "https://images.unsplash.com/photo-1526657782461-9fe13402a841?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Conceptual Photography",
+      category: "creative",
+      description: "Thought-provoking conceptual photography"
+    },
+    {
+      id: 79,
+      image: "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Creative Composition",
+      category: "creative",
+      description: "Innovative composition and framing techniques"
+    },
+    {
+      id: 80,
+      image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Artistic Vision",
+      category: "creative",
+      description: "Unique artistic vision and creative expression"
+    },
+
+    // Video Production (10 images)
+    {
+      id: 81,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Corporate Video Production",
       category: "video",
       description: "Brand story video for tech startup"
     },
     {
-      id: 17,
+      id: 82,
+      image: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Film Production Set",
+      category: "video",
+      description: "Professional film production behind the scenes"
+    },
+    {
+      id: 83,
+      image: "https://images.unsplash.com/photo-1489599749250-9ac7dcac9099?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Music Video Production",
+      category: "video",
+      description: "Creative music video filming and production"
+    },
+    {
+      id: 84,
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Documentary Filming",
+      category: "video",
+      description: "Documentary style video production"
+    },
+    {
+      id: 85,
+      image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Commercial Video Shoot",
+      category: "video",
+      description: "High-quality commercial video production"
+    },
+    {
+      id: 86,
+      image: "https://images.unsplash.com/photo-1559603278-ad960509d3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Event Video Coverage",
+      category: "video",
+      description: "Professional event videography services"
+    },
+    {
+      id: 87,
+      image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Studio Video Production",
+      category: "video",
+      description: "Controlled studio environment video filming"
+    },
+    {
+      id: 88,
+      image: "https://images.unsplash.com/photo-1551836022-8b2858c9c69b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Live Streaming Setup",
+      category: "video",
+      description: "Professional live streaming and broadcast setup"
+    },
+    {
+      id: 89,
+      image: "https://images.unsplash.com/photo-1495121553079-4c61bcce1894?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Video Post Production",
+      category: "video",
+      description: "Professional video editing and post-production"
+    },
+    {
+      id: 90,
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Cinematic Video Art",
+      category: "video",
+      description: "Cinematic style video production and storytelling"
+    },
+
+    // Branding (10 images)
+    {
+      id: 91,
       image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Brand Identity Design",
       category: "branding",
       description: "Complete brand package for restaurant chain"
     },
     {
-      id: 18,
+      id: 92,
+      image: "https://images.unsplash.com/photo-1586953409045-d95a2f7e2a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Logo Design Concepts",
+      category: "branding",
+      description: "Creative logo design and brand identity development"
+    },
+    {
+      id: 93,
+      image: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Brand Collateral Design",
+      category: "branding",
+      description: "Professional brand collateral and marketing materials"
+    },
+    {
+      id: 94,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Corporate Branding",
+      category: "branding",
+      description: "Corporate brand identity and visual systems"
+    },
+    {
+      id: 95,
+      image: "https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Brand Style Guide",
+      category: "branding",
+      description: "Comprehensive brand style guide development"
+    },
+    {
+      id: 96,
+      image: "https://images.unsplash.com/photo-1553032787-c8029c6e1228?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Packaging Design",
+      category: "branding",
+      description: "Creative product packaging and brand design"
+    },
+    {
+      id: 97,
+      image: "https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Brand Photography",
+      category: "branding",
+      description: "Professional brand photography and visual content"
+    },
+    {
+      id: 98,
+      image: "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Visual Brand Elements",
+      category: "branding",
+      description: "Creative visual brand elements and graphics"
+    },
+    {
+      id: 99,
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Brand Marketing Campaign",
+      category: "branding",
+      description: "Integrated brand marketing campaign design"
+    },
+    {
+      id: 100,
+      image: "https://images.unsplash.com/photo-1553884080-6d4b2b0c8b29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Digital Brand Experience",
+      category: "branding",
+      description: "Digital brand experience and online presence"
+    },
+
+    // Web Design (10 images)
+    {
+      id: 101,
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "E-commerce Website",
       category: "web",
       description: "Modern online store with seamless UX"
+    },
+    {
+      id: 102,
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Corporate Website Design",
+      category: "web",
+      description: "Professional corporate website development"
+    },
+    {
+      id: 103,
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Mobile App Interface",
+      category: "web",
+      description: "Responsive mobile application design"
+    },
+    {
+      id: 104,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Web Development Process",
+      category: "web",
+      description: "Professional web development and coding"
+    },
+    {
+      id: 105,
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "UI/UX Design",
+      category: "web",
+      description: "User interface and experience design"
+    },
+    {
+      id: 106,
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Website Development",
+      category: "web",
+      description: "Full-stack website development services"
+    },
+    {
+      id: 107,
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Web Application Development",
+      category: "web",
+      description: "Custom web application development"
+    },
+    {
+      id: 108,
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Frontend Development",
+      category: "web",
+      description: "Modern frontend development and frameworks"
+    },
+    {
+      id: 109,
+      image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Responsive Web Design",
+      category: "web",
+      description: "Mobile-first responsive website design"
+    },
+    {
+      id: 110,
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "Web Portfolio Showcase",
+      category: "web",
+      description: "Professional web portfolio and showcase sites"
     },
   ];
 
@@ -191,8 +855,8 @@ const Gallery = () => {
                     variant={selectedCategory === category.id ? "default" : "outline"}
                     className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
                       selectedCategory === category.id
-                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg"
-                        : "border-white/30 text-white hover:bg-white/10"
+                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg border-0"
+                        : "border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white"
                     }`}
                   >
                     <Icon className="w-4 h-4" />
