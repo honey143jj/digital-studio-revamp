@@ -1,7 +1,7 @@
-
 import { Share2, Users, Heart, MessageCircle, CheckCircle, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const SocialMedia = () => {
@@ -80,9 +80,11 @@ const SocialMedia = () => {
             Build your online presence and engage your audience with strategic social media 
             management that drives brand awareness and customer loyalty.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-full">
-            Boost Your Presence
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 text-white px-8 py-4 text-lg rounded-full">
+              Boost Your Presence
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -207,9 +209,11 @@ const SocialMedia = () => {
             Let's create a social media strategy that engages your audience and drives results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-8 py-4 text-lg rounded-full">
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-8 py-4 text-lg rounded-full">
+                Get Started
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
               View Examples
             </Button>
