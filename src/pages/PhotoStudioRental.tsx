@@ -21,63 +21,70 @@ const PhotoStudioRental = () => {
 
   const packages = [
     {
-      id: "basic",
-      name: "Basic Studio",
-      price: "$150",
-      duration: "4 hours",
+      id: "studio-only",
+      name: "Studio Setup Only",
+      price: "₹5,900",
+      duration: "Session",
       features: [
-        "Professional lighting setup",
-        "Backdrop selection (3 options)",
-        "Basic props and accessories",
-        "Changing room access",
-        "Free parking",
-        "WiFi access"
+        "4 Elinchrom Strob Lights",
+        "4 LED Continuous Lights",
+        "10 Paper Backdrop (Different Colors Including White, Black, and Grey)",
+        "Octagon, Strip and Squire Soft Boxes",
+        "Changing Room",
+        "Makeup Mirror",
+        "Wind Blower",
+        "Iron and Iron Table"
       ]
     },
     {
-      id: "premium",
-      name: "Premium Studio",
-      price: "$300",
-      duration: "8 hours",
+      id: "studio-with-camera",
+      name: "Studio Setup with Camera",
+      price: "₹7,080",
+      duration: "Session",
       popular: true,
       features: [
-        "All Basic features included",
-        "Advanced lighting equipment",
-        "Unlimited backdrop options",
-        "Professional props library",
-        "Hair & makeup station",
-        "Client lounge access",
-        "Equipment rental discounts",
-        "Technical assistance"
+        "Canon R6 M2 with 24-105 Lens",
+        "3 AI Podcast Camera",
+        "Pod Cast Mic",
+        "Edit Machine with Licensed Adobe CC",
+        "4 Elinchrom Strob Lights",
+        "4 LED Continuous Lights",
+        "10 Paper Backdrop (Different Colors Including White, Black, and Grey)",
+        "Octagon, Strip and Squire Soft Boxes",
+        "Changing Room",
+        "Makeup Mirror",
+        "Wind Blower",
+        "Iron and Iron Table"
       ]
     },
     {
-      id: "professional",
-      name: "Professional Suite",
-      price: "$500",
-      duration: "Full day",
+      id: "studio-with-photographer",
+      name: "Studio with Photographer",
+      price: "₹9,440",
+      duration: "Session",
       features: [
-        "All Premium features included",
-        "Private studio suite",
-        "Professional photographer on-call",
-        "Video recording capabilities",
-        "Green screen setup",
-        "Catering service",
-        "Client consultation",
-        "Post-production support"
+        "Photographer with Camera setup",
+        "4 Elinchrom Strob Lights",
+        "4 LED Continuous Lights",
+        "10 Paper Backdrop (Different Colors Including White, Black, and Grey)",
+        "Octagon, Strip and Squire Soft Boxes",
+        "Changing Room",
+        "Makeup Mirror",
+        "Wind Blower",
+        "Iron and Iron Table"
       ]
     }
   ];
 
   const equipment = [
-    "Canon EOS R5 & R6 Cameras",
-    "Professional Lighting Kits",
-    "Backdrop Support Systems",
-    "Ring Lights & Softboxes",
-    "Tripods & Stabilizers",
-    "Audio Recording Equipment",
-    "Green Screen Setup",
-    "Props & Accessories"
+    "Canon R6 M2 with 24-105 Lens",
+    "Elinchrom Strob Lights",
+    "LED Continuous Lights",
+    "Paper Backdrops (Multiple Colors)",
+    "Octagon & Strip Soft Boxes",
+    "AI Podcast Cameras",
+    "Licensed Adobe CC Suite",
+    "Professional Audio Equipment"
   ];
 
   return (
@@ -171,14 +178,15 @@ const PhotoStudioRental = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white">{pkg.name}</CardTitle>
                   <div className="text-4xl font-bold text-purple-400">{pkg.price}</div>
-                  <div className="text-gray-400">{pkg.duration}</div>
+                  <div className="text-gray-400">Per {pkg.duration}</div>
+                  <div className="text-sm text-gray-500 mt-2">SESSION PARAMETERS:</div>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {pkg.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
+                      <li key={index} className="flex items-start text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -273,7 +281,7 @@ const PhotoStudioRental = () => {
               <CardContent className="p-6 text-center">
                 <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-400">+1 (555) 123-4567</p>
+                <p className="text-gray-400">+91 (555) 123-4567</p>
               </CardContent>
             </Card>
 
@@ -289,7 +297,7 @@ const PhotoStudioRental = () => {
               <CardContent className="p-6 text-center">
                 <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-400">123 Studio Street, City</p>
+                <p className="text-gray-400">123 Studio Street, Mumbai</p>
               </CardContent>
             </Card>
           </div>
