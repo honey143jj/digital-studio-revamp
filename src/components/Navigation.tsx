@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Menu, X, Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Settings } from "lucide-react";
+import { Menu, X, Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Settings, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,6 +10,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Photo Studio", path: "/photo-studio", icon: Camera },
+    { name: "Studio Rental", path: "/photo-studio-rental", icon: Building },
     { name: "Video Production", path: "/video-production", icon: Video },
     { name: "Graphics & Branding", path: "/graphics-branding", icon: Palette },
     { name: "Web Development", path: "/web-development", icon: Globe },
