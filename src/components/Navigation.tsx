@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X, Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Settings, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,10 +26,22 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              KGMI
-            </span>
+          <Link to="/" className="flex items-center">
+            <div className="grid grid-cols-2 gap-1 p-2 bg-gradient-to-br from-purple-600 via-blue-500 to-pink-500 rounded-lg shadow-lg hover:shadow-purple-500/25 transition-all duration-300 animate-pulse">
+              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                <span className="text-black font-bold text-sm">K</span>
+              </div>
+              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                <span className="text-black font-bold text-sm">G</span>
+              </div>
+              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                <span className="text-black font-bold text-sm">M</span>
+              </div>
+              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center relative">
+                <span className="text-black font-bold text-sm">i</span>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></div>
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

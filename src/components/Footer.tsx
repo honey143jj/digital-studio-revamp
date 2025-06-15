@@ -19,11 +19,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                KGMI
-              </span>
-            </h3>
+            <div className="flex items-center mb-4">
+              <div className="grid grid-cols-2 gap-1 p-2 bg-gradient-to-br from-purple-600 via-blue-500 to-pink-500 rounded-lg shadow-lg hover:shadow-purple-500/25 transition-all duration-300 animate-pulse mr-3">
+                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                  <span className="text-black font-bold text-sm">K</span>
+                </div>
+                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                  <span className="text-black font-bold text-sm">G</span>
+                </div>
+                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                  <span className="text-black font-bold text-sm">M</span>
+                </div>
+                <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center relative">
+                  <span className="text-black font-bold text-sm">i</span>
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-white">KGMI</h3>
+            </div>
             <p className="text-gray-400 mb-6">
               Digital Studio & Creative Agency transforming ideas into stunning visual experiences.
             </p>
