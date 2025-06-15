@@ -454,76 +454,76 @@ export const galleryItems = [
     description: "Elegant bridal portrait showcasing traditional makeup and jewelry"
   },
 
-  // Product Photography
+  // Product Photography (NEW UPLOADED IMAGES)
   {
     id: 57,
-    image: "/lovable-uploads/9a9b9252-78b7-43f1-8851-9560324c9b48.png",
-    title: "Premium Product Photography",
+    image: "/lovable-uploads/9c811ee1-2a63-4b3a-b86d-300a2d25e5d1.png",
+    title: "Premium Cotton Napkin Collection",
     category: "product",
-    description: "High-end jewelry and product photography with professional lighting"
+    description: "High-quality 100% cotton napkins with soft smooth hand block print design"
   },
   {
     id: 58,
-    image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Corporate Product Showcase",
+    image: "/lovable-uploads/7112d8f6-81ec-4f4d-9141-7dc78d6ab9cf.png",
+    title: "Fashion Lifestyle Photography",
     category: "product",
-    description: "Professional product showcase for luxury brand"
+    description: "Stylish fashion product photography featuring trendy casual wear and accessories"
   },
   {
     id: 59,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Tech Product Photography",
+    image: "/lovable-uploads/0a438aa2-6c09-47ae-9901-aecde2a01c9c.png",
+    title: "Premium Tea Collection Photography",
     category: "product",
-    description: "Modern technology product photography"
+    description: "Professional product photography of LEAFBOX premium tea collection with elegant glass teapot"
   },
   {
     id: 60,
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Fashion Product Shoot",
+    image: "/lovable-uploads/b5586bf6-13d1-4812-9170-c113e8e36c0f.png",
+    title: "Luxury Mattress Product Photography",
     category: "product",
-    description: "Stylish fashion products and accessories"
+    description: "High-end mattress photography featuring elegant bedroom setting with traditional patterns"
   },
   {
     id: 61,
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Food Product Photography",
+    image: "/lovable-uploads/6008189d-29d6-4f11-b121-771066029357.png",
+    title: "Premium Mattress Collection",
     category: "product",
-    description: "Delicious food and beverage product photography"
+    description: "Professional product photography of luxury mattress with geometric patterns in modern bedroom"
   },
   {
     id: 62,
-    image: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Beauty Product Shoot",
+    image: "/lovable-uploads/69994701-a59d-4b5e-9819-29e39e24976c.png",
+    title: "Floor Mat Product Design",
     category: "product",
-    description: "Elegant beauty and cosmetic product photography"
+    description: "Professional product photography showing floor mat dimensions and measurements (72\" x 30\")"
   },
   {
     id: 63,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Home Decor Products",
+    image: "/lovable-uploads/49bb371f-e3cc-4027-ab35-96650627dc78.png",
+    title: "Pharmaceutical Product Photography",
     category: "product",
-    description: "Stylish home decoration product photography"
+    description: "Professional medical product photography of Colladan-Plus tablets with clean packaging design"
   },
   {
     id: 64,
-    image: "https://images.unsplash.com/photo-1585633434967-a0f5b3c87ce9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Lifestyle Product Shoot",
+    image: "/lovable-uploads/b0d2efaf-63c8-4597-9ebe-de15b4d4fecc.png",
+    title: "Medical Product Packaging",
     category: "product",
-    description: "Products in lifestyle and usage contexts"
+    description: "High-quality pharmaceutical product photography featuring Trydan-A tablets with professional lighting"
   },
   {
     id: 65,
-    image: "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Luxury Product Line",
+    image: "/lovable-uploads/52943be7-c739-44b2-89d7-38619d07d85b.png",
+    title: "Healthcare Product Photography",
     category: "product",
-    description: "High-end luxury product photography"
+    description: "Professional product photography of TESCAL-K2 medical supplements with clean packaging"
   },
   {
     id: 66,
-    image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "E-commerce Products",
+    image: "/lovable-uploads/ce4617ab-71cb-4356-ac61-5d9dc1dc5a91.png",
+    title: "Organic Groundnut Oil Photography",
     category: "product",
-    description: "Clean e-commerce product photography"
+    description: "Natural product photography featuring organic groundnut oil with nuts and traditional wooden elements"
   },
 
   // Traditional Photography
