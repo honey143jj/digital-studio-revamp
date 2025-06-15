@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Camera, Clock, Users, Wifi, Coffee, Car, Shield, CheckCircle, Star, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -120,7 +119,7 @@ const PhotoStudioRental = () => {
               </Button>
             </Link>
             <Link to="/gallery">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg bg-transparent">
                 View Gallery
               </Button>
             </Link>
