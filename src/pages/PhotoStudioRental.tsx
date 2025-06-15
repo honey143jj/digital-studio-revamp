@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Camera, Clock, Users, Wifi, Coffee, Car, Shield, CheckCircle, Star, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -117,7 +118,7 @@ const PhotoStudioRental = () => {
               Book Now
             </Button>
             <Link to="/gallery">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/20 px-8 py-4 text-lg bg-white/10 backdrop-blur-sm">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg">
                 View Gallery
               </Button>
             </Link>
@@ -228,8 +229,8 @@ const PhotoStudioRental = () => {
 
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Studio Equipment"
+                src="/lovable-uploads/fec97f4b-734f-455f-a362-75b4a43acf0f.png"
+                alt="Professional Birthday Cake Photography"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent rounded-2xl"></div>
@@ -250,17 +251,17 @@ const PhotoStudioRental = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              "https://images.unsplash.com/photo-1567450169088-17f8c2a2b915?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              "https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-              "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              "/lovable-uploads/ba1c2ab9-a23c-4f2d-8d44-2b3a8cddb82d.png",
+              "/lovable-uploads/198574a8-eb11-47b9-8c3b-263efbecf2f7.png",
+              "/lovable-uploads/0eaf578d-58fe-4add-a7a4-46080ee7dce8.png",
+              "/lovable-uploads/4262f254-f9fb-40bf-86cc-27b0808ff238.png",
+              "/lovable-uploads/aa4e3c8f-1d1e-4941-8b77-6b64a60640c8.png",
+              "/lovable-uploads/bbaac003-12b7-44b8-a848-1ef8d609d724.png"
             ].map((src, index) => (
               <div key={index} className="group relative overflow-hidden rounded-xl">
                 <img 
                   src={src}
-                  alt={`Studio view ${index + 1}`}
+                  alt={`KGMI Studio view ${index + 1}`}
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
