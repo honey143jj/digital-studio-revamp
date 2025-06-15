@@ -15,7 +15,8 @@ import {
   LogOut,
   Settings,
   BarChart3,
-  Users
+  Users,
+  Edit
 } from "lucide-react";
 import AdminServiceEditor from "@/components/admin/AdminServiceEditor";
 import AdminGalleryEditor from "@/components/admin/AdminGalleryEditor";
@@ -61,8 +62,10 @@ const AdminDashboard = () => {
           <div className="flex items-center gap-3">
             <Button 
               onClick={() => navigate('/admin/visual-editor')}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium"
+              size="default"
             >
+              <Edit className="w-4 h-4 mr-2" />
               Visual Editor
             </Button>
             <Button onClick={handleLogout} variant="outline" className="border-white/20 text-white hover:bg-white/10">

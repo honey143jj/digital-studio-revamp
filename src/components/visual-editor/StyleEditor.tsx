@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Palette, Type, Box, Spacing } from "lucide-react";
+import { Palette, Type, Box } from "lucide-react";
 import { PageElement } from "@/hooks/useVisualEditor";
 
 interface StyleEditorProps {
