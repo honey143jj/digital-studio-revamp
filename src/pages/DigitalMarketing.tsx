@@ -2,6 +2,7 @@
 import { TrendingUp, Target, BarChart, Users, CheckCircle, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const DigitalMarketing = () => {
@@ -78,9 +79,11 @@ const DigitalMarketing = () => {
             Strategic digital campaigns that amplify your brand, reach your target audience, 
             and deliver measurable ROI through data-driven marketing solutions.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white px-8 py-4 text-lg rounded-full">
-            Grow Your Business
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white px-8 py-4 text-lg rounded-full">
+              Grow Your Business
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -198,9 +201,11 @@ const DigitalMarketing = () => {
             Let's create a digital marketing strategy that delivers real results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 px-8 py-4 text-lg rounded-full">
-              Get Free Audit
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 px-8 py-4 text-lg rounded-full">
+                Get Free Audit
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
               View Case Studies
             </Button>

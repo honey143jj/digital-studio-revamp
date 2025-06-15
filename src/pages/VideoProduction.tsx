@@ -2,6 +2,7 @@
 import { Video, Film, Edit, Play, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const VideoProduction = () => {
@@ -68,9 +69,11 @@ const VideoProduction = () => {
             From concept to completion, we create compelling videos that tell your story 
             and captivate your audience with professional cinematography and editing.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-8 py-4 text-lg rounded-full">
-            Start Your Project
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-8 py-4 text-lg rounded-full">
+              Start Your Project
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -178,9 +181,11 @@ const VideoProduction = () => {
             Let's discuss your video project and bring your vision to life
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 px-8 py-4 text-lg rounded-full">
-              Get Quote
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 px-8 py-4 text-lg rounded-full">
+                Get Quote
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
               View Portfolio
             </Button>

@@ -2,6 +2,7 @@
 import { Camera, Clock, Users, Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const PhotoStudio = () => {
@@ -75,9 +76,11 @@ const PhotoStudio = () => {
             State-of-the-art photography studio equipped with professional lighting, 
             backdrops, and everything you need for the perfect shoot.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full">
-            Book Studio Now
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full">
+              Book Studio Now
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -149,9 +152,11 @@ const PhotoStudio = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
-                    Book Now
-                  </Button>
+                  <Link to="/contact">
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                      Book Now
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -167,9 +172,11 @@ const PhotoStudio = () => {
             Contact us today to reserve your time slot and bring your creative vision to life
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full">
-              Book Studio
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full">
+                Book Studio
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
               View Gallery
             </Button>
