@@ -113,10 +113,12 @@ const PhotoStudioRental = () => {
             perfect lighting, and everything you need for your perfect shoot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Now
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 text-lg">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Now
+              </Button>
+            </Link>
             <Link to="/gallery">
               <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg">
                 View Gallery
@@ -395,10 +397,12 @@ const PhotoStudioRental = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-4 text-lg">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Studio Now
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-12 py-4 text-lg">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Studio Now
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-white/70 text-white hover:bg-white/20 px-12 py-4 text-lg">
               Request Quote
             </Button>
