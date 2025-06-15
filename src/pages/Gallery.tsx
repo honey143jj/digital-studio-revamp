@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ArrowLeft, Camera, Video, Palette, Globe, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -86,7 +85,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      image: "/lovable-uploads/bfc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
       title: "Creative Kids Photography",
       category: "kids",
       description: "Fun and creative children photography with colorful backdrops"

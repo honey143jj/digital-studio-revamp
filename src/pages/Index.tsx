@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Eye, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -26,7 +25,7 @@ const Index = () => {
     },
     {
       id: 3,
-      image: "/lovable-uploads/bfc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
       title: "Kids Photography",
       subtitle: "Creative and fun children photography"
     },
@@ -50,7 +49,7 @@ const Index = () => {
     },
     {
       id: 7,
-      image: "/lovable-uploads/fbc6ad72-6095-42e0-8ecf-397399ddfb15.png",
+      image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
       title: "Creative Photography",
       subtitle: "Innovative and artistic visual concepts"
     },
