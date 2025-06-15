@@ -233,17 +233,7 @@ const Index = () => {
             </Link>
           </div>
 
-          {/* Additional Gallery CTA */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30 max-w-2xl mx-auto">
-            <p className="text-white mb-4 text-lg">
-              🎯 See our professional studio and creative work
-            </p>
-            <Link to="/gallery">
-              <Button variant="outline" className="border-white/70 text-white hover:bg-white/20 px-6 py-2 rounded-full">
-                Browse Gallery →
-              </Button>
-            </Link>
-          </div>
+          
         </div>
       </section>
 
