@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Camera, Clock, Users, Wifi, Coffee, Car, Shield, CheckCircle, Star, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -285,51 +286,64 @@ const PhotoStudioRental = () => {
               <div className="space-y-6 text-gray-300">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Booking and Payment</h3>
+                  <div className="space-y-3 text-sm">
+                    <p>• For booking, you need to pay 100% advance transfer to company account.</p>
+                    <p>• <strong>ONLY 5 PERSONS ALLOWED IN THE STUDIO</strong> with prior details of every individual with name, number and role in the shoot.</p>
+                    <div className="bg-purple-900/30 p-3 rounded border border-purple-500/30">
+                      <p className="font-semibold text-purple-200">Bank Details:</p>
+                      <p>Account name: Khammaa Ghani Moving Images</p>
+                      <p>A/No. 912020041566736</p>
+                      <p>IFSC: UTIB0000311</p>
+                    </div>
+                    <p>• After payment confirmation, booking confirmation will be texted on WhatsApp.</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Cancellation Policy</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• Advance booking is required with 50% payment to confirm your slot</li>
-                    <li>• Full payment must be completed before the session begins</li>
-                    <li>• Cancellations made 24 hours before the booking will receive a full refund</li>
-                    <li>• Cancellations made within 24 hours will forfeit the advance payment</li>
+                    <li>• In case of booking cancellation, only 50% will be refundable IF BOOKING CANCELLED BEFORE 48 HOURS OF TIME SLOT</li>
+                    <li>• AFTER 48 HOURS THERE IS NO REFUND POLICY</li>
+                    <li>• Any damage in booked premises has to be covered by the person who booked it</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Studio Usage</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Session Parameters</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• Studio access is limited to booked hours only</li>
-                    <li>• Maximum 10 people allowed in the studio at any time</li>
-                    <li>• Smoking, alcohol, and illegal substances are strictly prohibited</li>
-                    <li>• Studio must be left in the same condition as found</li>
-                    <li>• Any damage to equipment or property will be charged separately</li>
+                    <li>• Your booking time shall start as your booked time slot</li>
+                    <li>• Reaching late at premises will not add up extra time</li>
+                    <li>• Reaching early at premises and starting to shoot before time slot will automatically shift time slot to the time you had started using premises</li>
+                    <li>• Your session time starts from the BOOKED time and ends when the last person of your crew leaves the studio</li>
+                    <li>• Company has introduced Two Hybrid LED lights Godox FV200 which can be used as VIDEO and PHOTO for both</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Equipment and Safety</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Studio Rules</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• All equipment must be handled with care and returned in working condition</li>
-                    <li>• KGMI staff will provide basic equipment training if needed</li>
-                    <li>• Clients are responsible for any equipment damage during their session</li>
-                    <li>• Safety guidelines must be followed at all times</li>
-                    <li>• Children under 16 must be supervised by adults</li>
+                    <li>• PETS NOT allowed inside the studio</li>
+                    <li>• Eatables & Drinks NOT allowed near backdrop</li>
+                    <li>• Smoking & Alcohol NOT allowed inside the studio</li>
+                    <li>• Only INDIVIDUALS related to photoshoot allowed inside the studio</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Intellectual Property</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Damage Policy</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• Clients retain full rights to their creative work and images</li>
-                    <li>• KGMI may request permission to use images for promotional purposes</li>
-                    <li>• Any copyrighted music or content used is the client's responsibility</li>
+                    <li>• Backdrop damage or any damage to any other thing will be payable by the client who booked the studio</li>
+                    <li>• Paper Backdrop damage – INR 1,500</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Liability</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Additional Information</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• KGMI is not liable for personal injury or loss of personal items</li>
-                    <li>• Clients use the studio facilities at their own risk</li>
-                    <li>• Comprehensive insurance coverage is included for studio equipment</li>
+                    <li>• Customised package also available as per requirement</li>
+                    <li>• Monthly package for regular shoots available</li>
+                    <li>• In case of electricity failure or any other delay from studio side during the shoot, studio shall compensate accordingly by providing extra time without any extra charges</li>
+                    <li>• Any dispute needs to be dealt under Jaipur jurisdiction</li>
                   </ul>
                 </div>
 
