@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import { Camera, Clock, Users, Wifi, Coffee, Car, Shield, CheckCircle, Star, Calendar, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const PhotoStudioRental = () => {
@@ -116,9 +116,11 @@ const PhotoStudioRental = () => {
               <Calendar className="w-5 h-5 mr-2" />
               Book Now
             </Button>
-            <Button variant="outline" size="lg" className="border-white/70 text-white hover:bg-white/20 px-8 py-4 text-lg">
-              View Gallery
-            </Button>
+            <Link to="/gallery">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/20 px-8 py-4 text-lg bg-white/10 backdrop-blur-sm">
+                View Gallery
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -265,6 +267,82 @@ const PhotoStudioRental = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Terms and Conditions */}
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Terms and Conditions</h2>
+            <p className="text-xl text-gray-400">
+              Please read our studio rental terms carefully
+            </p>
+          </div>
+
+          <Card className="bg-slate-800/50 border-white/10">
+            <CardContent className="p-8">
+              <div className="space-y-6 text-gray-300">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Booking and Payment</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Advance booking is required with 50% payment to confirm your slot</li>
+                    <li>• Full payment must be completed before the session begins</li>
+                    <li>• Cancellations made 24 hours before the booking will receive a full refund</li>
+                    <li>• Cancellations made within 24 hours will forfeit the advance payment</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Studio Usage</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Studio access is limited to booked hours only</li>
+                    <li>• Maximum 10 people allowed in the studio at any time</li>
+                    <li>• Smoking, alcohol, and illegal substances are strictly prohibited</li>
+                    <li>• Studio must be left in the same condition as found</li>
+                    <li>• Any damage to equipment or property will be charged separately</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Equipment and Safety</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• All equipment must be handled with care and returned in working condition</li>
+                    <li>• KGMI staff will provide basic equipment training if needed</li>
+                    <li>• Clients are responsible for any equipment damage during their session</li>
+                    <li>• Safety guidelines must be followed at all times</li>
+                    <li>• Children under 16 must be supervised by adults</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Intellectual Property</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Clients retain full rights to their creative work and images</li>
+                    <li>• KGMI may request permission to use images for promotional purposes</li>
+                    <li>• Any copyrighted music or content used is the client's responsibility</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Liability</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• KGMI is not liable for personal injury or loss of personal items</li>
+                    <li>• Clients use the studio facilities at their own risk</li>
+                    <li>• Comprehensive insurance coverage is included for studio equipment</li>
+                  </ul>
+                </div>
+
+                <div className="bg-purple-900/30 p-4 rounded-lg border border-purple-500/30">
+                  <p className="text-sm text-purple-200">
+                    <strong>Note:</strong> By booking our studio, you agree to abide by these terms and conditions. 
+                    KGMI reserves the right to modify these terms at any time. For any questions or clarifications, 
+                    please contact us before your booking.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
