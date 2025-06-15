@@ -233,76 +233,76 @@ export const galleryItems = [
     description: "Beauty and fashion portrait combination"
   },
 
-  // Kids Photography (Updated with user uploaded images)
+  // Kids Photography (Updated with new uploaded images)
   {
     id: 31,
-    image: "/lovable-uploads/201207ed-f838-48ff-940a-c308152bff0d.png",
-    title: "Baby Boy with Minion",
+    image: "/lovable-uploads/83bdb818-2b09-4da1-8e7e-6327514577db.png",
+    title: "Stylish Kids Fashion Portrait",
     category: "kids",
-    description: "Adorable baby boy studio portrait with Minion character prop"
+    description: "Adorable child in fashionable outfit with pink hat and sunglasses"
   },
   {
     id: 32,
-    image: "/lovable-uploads/50da58b0-718f-46c1-8ea1-4cb7cae77d26.png",
-    title: "Baby Bath Time Portrait",
+    image: "/lovable-uploads/248559cf-a96d-4806-8f63-46534a58fec2.png",
+    title: "Cool Kids Portrait Session",
     category: "kids",
-    description: "Sweet baby portrait with bubbles and playful theme"
+    description: "Cute child in trendy outfit with stylish sunglasses and pink accessories"
   },
   {
     id: 33,
-    image: "/lovable-uploads/cad449d0-121f-440a-8bb2-b54aad73c20c.png",
-    title: "Little Girl with Pink Balloons",
+    image: "/lovable-uploads/58c5bba7-827f-496b-b3ec-54ba6020b763.png",
+    title: "Little Musician Portrait",
     category: "kids",
-    description: "Beautiful little girl in red dress with pink balloons"
+    description: "Young child with guitar wearing adorable blue beret"
   },
   {
     id: 34,
-    image: "/lovable-uploads/541b1193-3536-44ab-871e-ba90225a9108.png",
-    title: "First Birthday Cake Smash",
+    image: "/lovable-uploads/df1b5911-4a99-4c02-98ed-5d215b123ef3.png",
+    title: "Formal Kids Portrait",
     category: "kids",
-    description: "Adorable cake smash portrait in pink dress with balloons"
+    description: "Professional portrait of child in formal striped suit with hat"
   },
   {
     id: 35,
-    image: "/lovable-uploads/f5dd6434-18a9-44d1-afd1-083a16b34c8d.png",
-    title: "Girl in Floral Dress",
+    image: "/lovable-uploads/98088193-59a5-492c-a7a3-0a08e5f901c7.png",
+    title: "Kids Fashion Shoot",
     category: "kids",
-    description: "Beautiful portrait of young girl in floral dress and pink cardigan"
+    description: "Dynamic kids fashion photography with pinstriped suit"
   },
   {
     id: 36,
-    image: "/lovable-uploads/2ee66751-28c8-491e-86bd-43954bd5c0b9.png",
-    title: "Traditional Yellow Outfit",
+    image: "/lovable-uploads/3c99a26f-dd7f-4b36-86e3-48c914e10d9c.png",
+    title: "Dapper Young Gentleman",
     category: "kids",
-    description: "Beautiful traditional portrait in yellow outfit with namaste pose"
+    description: "Elegant young boy in formal attire walking with confidence"
   },
   {
     id: 37,
-    image: "/lovable-uploads/06339c5a-bf8b-4bad-b292-6cb933d72283.png",
-    title: "Baby Boy with Flying Toy",
+    image: "/lovable-uploads/65c95eab-69df-4f98-b716-0d7c6f296be2.png",
+    title: "Traditional Kids Portrait",
     category: "kids",
-    description: "Joyful baby boy playing with colorful flying toy"
+    description: "Beautiful child in traditional pink attire sitting in decorative chair"
   },
   {
     id: 38,
-    image: "/lovable-uploads/f2f96339-1c79-4df5-862d-2c017a551f94.png",
-    title: "First Birthday Celebration",
+    image: "/lovable-uploads/0c9701e0-2b17-49e9-be4b-ee482aa4bd13.png",
+    title: "Expressive Kids Portrait",
     category: "kids",
-    description: "First birthday celebration with blue theme and cake smash"
+    description: "Joyful child in traditional pink outfit with sunglasses and animated pose"
   },
   {
     id: 39,
-    image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
-    title: "Creative Kids Studio Setup",
+    image: "/lovable-uploads/2ff51acd-e8fd-4db2-a8ea-d3e336db2f00.png",
+    title: "Young Musician Session",
     category: "kids",
-    description: "Professional kids photography with colorful backdrops and props"
+    description: "Happy child playing ukulele in casual white attire"
   },
   {
     id: 40,
     image: "https://images.unsplash.com/photo-1518743312178-6c3e3d2e6a45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Kids Fashion Shoot",
+    title: "Kids Outdoor Portrait",
     category: "kids",
-    description: "Stylish children's fashion photography"
+    description: "Natural kids photography in outdoor setting"
   },
 
   // Wedding Photography (10 images)
