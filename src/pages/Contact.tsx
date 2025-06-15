@@ -91,11 +91,15 @@ const Contact = () => {
             })}
           </div>
           
-          {/* Get Project Quote Button - Made more visible */}
+          {/* Get Project Quote Button - Made more visible with proper styling */}
           <div className="text-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-12 py-4 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold px-12 py-4 text-lg rounded-full shadow-xl border-0 transform hover:scale-105 transition-all duration-300"
+              style={{
+                background: 'linear-gradient(45deg, #10b981, #059669)',
+                border: 'none'
+              }}
             >
               Get Project Quote
             </Button>
