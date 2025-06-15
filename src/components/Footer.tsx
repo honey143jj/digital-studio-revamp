@@ -1,3 +1,4 @@
+
 import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
@@ -162,7 +163,7 @@ const Footer = () => {
           
           <div className="text-center">
             <p className="text-gray-500">
-              © 2024 KGMI Digital Studio. All rights reserved. | Transforming Ideas Into Visual Excellence
+              © 2009 KGMI Digital Studio. All rights reserved. | Transforming Ideas Into Visual Excellence
             </p>
           </div>
         </div>
