@@ -2,6 +2,7 @@
 import { Globe, Code, Smartphone, Zap, CheckCircle, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 
 const WebDevelopment = () => {
@@ -82,9 +83,11 @@ const WebDevelopment = () => {
             Modern, responsive websites that drive engagement and convert visitors into customers. 
             Built with the latest technologies for optimal performance.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full">
-            Start Your Website
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 text-lg rounded-full">
+              Start Your Website
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -214,9 +217,11 @@ const WebDevelopment = () => {
             Let's create a website that drives results for your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full">
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 px-8 py-4 text-lg rounded-full">
+                Get Started
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full">
               View Portfolio
             </Button>
