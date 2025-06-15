@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X, Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone } from "lucide-react";
+import { Menu, X, Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -44,6 +44,14 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            {/* Admin Login Link */}
+            <Link
+              to="/admin/login"
+              className="flex items-center space-x-1 text-xs font-medium text-gray-500 hover:text-purple-400 transition-colors"
+            >
+              <Settings className="h-3 w-3" />
+              <span>Admin</span>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -76,6 +84,15 @@ const Navigation = () => {
                   <span>{item.name}</span>
                 </Link>
               ))}
+              {/* Admin Login Link for Mobile */}
+              <Link
+                to="/admin/login"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center space-x-2 text-xs font-medium text-gray-500 hover:text-purple-400 transition-colors pt-2 border-t border-white/10"
+              >
+                <Settings className="h-3 w-3" />
+                <span>Admin Login</span>
+              </Link>
             </div>
           </div>
         )}
