@@ -1,24 +1,10 @@
 
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { toast } from "sonner";
-import { useState } from "react";
 import Layout from "@/components/Layout";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    projectDetails: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const contactInfo = [
     {
       icon: Phone,
@@ -45,64 +31,6 @@ const Contact = () => {
       color: "from-red-500 to-orange-600"
     }
   ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.projectDetails) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      // Create email content
-      const emailSubject = `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`;
-      const emailBody = `
-Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone || 'Not provided'}
-
-Project Details:
-${formData.projectDetails}
-
----
-This message was sent from the KGMI website contact form.
-      `;
-
-      // Create mailto link
-      const mailtoLink = `mailto:info@kgmi.net?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-      
-      // Open default email client
-      window.location.href = mailtoLink;
-
-      toast.success("Email client opened! Please send the email to complete your message.");
-      
-      // Reset form
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        projectDetails: ""
-      });
-
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("There was an error processing your request. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <Layout>
@@ -155,112 +83,14 @@ This message was sent from the KGMI website contact form.
         </div>
       </section>
 
-      {/* Contact Form & Map */}
+      {/* Studio Info */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-purple-900/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-8">Send Us a Message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="firstName" className="block text-gray-300 text-sm font-medium mb-2">
-                      First Name *
-                    </Label>
-                    <Input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
-                      placeholder="John"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="lastName" className="block text-gray-300 text-sm font-medium mb-2">
-                      Last Name *
-                    </Label>
-                    <Input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
-                      placeholder="Doe"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
-                    Email *
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
-                    placeholder="john@example.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="phone" className="block text-gray-300 text-sm font-medium mb-2">
-                    Phone
-                  </Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="projectDetails" className="block text-gray-300 text-sm font-medium mb-2">
-                    Project Details *
-                  </Label>
-                  <Textarea
-                    id="projectDetails"
-                    name="projectDetails"
-                    value={formData.projectDetails}
-                    onChange={handleInputChange}
-                    rows={5}
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none resize-none"
-                    placeholder="Tell us about your project, timeline, and any specific requirements..."
-                    required
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-4 text-lg rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  {isSubmitting ? "Processing..." : "Send Message"}
-                </Button>
-              </form>
-            </div>
-
-            {/* Map/Studio Info */}
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-8">Visit Our Studio</h2>
-              
-              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Visit Our Studio</h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-6">KGMI Digital Studio</h3>
                 
                 <div className="space-y-4">
