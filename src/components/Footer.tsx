@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>81, Shiv Colony, Vaishali Nagar, Jaipur- 302021</span>
+                <span>81, shiv colony, Habib Marg, Gandhi Path W, Vaishali Nagar, Jaipur, Rajasthan 302021</span>
               </div>
             </div>
           </div>

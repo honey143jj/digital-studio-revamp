@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,7 +12,7 @@ const AdminContactEditor = () => {
   const { toast } = useToast();
   
   const [contactInfo, setContactInfo] = useState({
-    address: "81, Shiv Colony, Vaishali Nagar, Jaipur- 302021, Rajasthan, INDIA",
+    address: "81, shiv colony, Habib Marg, Gandhi Path W, Vaishali Nagar, Jaipur, Rajasthan 302021",
     phone: "+91-9867226595",
     email: "info@kgmi.net",
     hours: "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM",

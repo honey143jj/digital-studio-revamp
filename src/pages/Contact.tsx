@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,7 +20,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["81, Shiv Colony, Vaishali Nagar", "Jaipur- 302021, Rajasthan, INDIA"],
+      details: ["81, shiv colony, Habib Marg, Gandhi Path W,", "Vaishali Nagar, Jaipur, Rajasthan 302021"],
       color: "from-pink-500 to-red-600"
     },
     {
@@ -98,7 +97,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
                       <p className="text-white font-medium">Address</p>
-                      <p className="text-gray-400">81, Shiv Colony, Vaishali Nagar<br />Jaipur- 302021, Rajasthan, INDIA</p>
+                      <p className="text-gray-400">81, shiv colony, Habib Marg, Gandhi Path W,<br />Vaishali Nagar, Jaipur, Rajasthan 302021</p>
                     </div>
                   </div>
                   
