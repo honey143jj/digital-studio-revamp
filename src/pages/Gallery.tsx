@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ArrowLeft, Camera, Video, Palette, Globe, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -243,69 +242,69 @@ const Gallery = () => {
       description: "Beauty and fashion portrait combination"
     },
 
-    // Kids Photography (10 images)
+    // Kids Photography (Updated with user uploaded images)
     {
       id: 31,
-      image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
-      title: "Creative Kids Photography",
+      image: "/lovable-uploads/201207ed-f838-48ff-940a-c308152bff0d.png",
+      title: "Baby Boy with Minion",
       category: "kids",
-      description: "Fun and creative children photography with colorful backdrops"
+      description: "Adorable baby boy studio portrait with Minion character prop"
     },
     {
       id: 32,
-      image: "https://images.unsplash.com/photo-1560131914-b927d6f13ab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Happy Child Portrait",
+      image: "/lovable-uploads/50da58b0-718f-46c1-8ea1-4cb7cae77d26.png",
+      title: "Baby Bath Time Portrait",
       category: "kids",
-      description: "Joyful children's portrait photography"
+      description: "Sweet baby portrait with bubbles and playful theme"
     },
     {
       id: 33,
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Kids Playing Outdoors",
+      image: "/lovable-uploads/cad449d0-121f-440a-8bb2-b54aad73c20c.png",
+      title: "Little Girl with Pink Balloons",
       category: "kids",
-      description: "Natural outdoor children photography"
+      description: "Beautiful little girl in red dress with pink balloons"
     },
     {
       id: 34,
-      image: "https://images.unsplash.com/photo-1548699667-6966ac4189c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Baby's First Year",
+      image: "/lovable-uploads/541b1193-3536-44ab-871e-ba90225a9108.png",
+      title: "First Birthday Cake Smash",
       category: "kids",
-      description: "Beautiful baby and newborn photography"
+      description: "Adorable cake smash portrait in pink dress with balloons"
     },
     {
       id: 35,
-      image: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Children's Birthday Party",
+      image: "/lovable-uploads/f5dd6434-18a9-44d1-afd1-083a16b34c8d.png",
+      title: "Girl in Floral Dress",
       category: "kids",
-      description: "Fun birthday celebration photography"
+      description: "Beautiful portrait of young girl in floral dress and pink cardigan"
     },
     {
       id: 36,
-      image: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Siblings Bond",
+      image: "/lovable-uploads/2ee66751-28c8-491e-86bd-43954bd5c0b9.png",
+      title: "Traditional Yellow Outfit",
       category: "kids",
-      description: "Sweet sibling photography capturing their bond"
+      description: "Beautiful traditional portrait in yellow outfit with namaste pose"
     },
     {
       id: 37,
-      image: "https://images.unsplash.com/photo-1566257052949-cdac2fc7e01c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Kids Summer Fun",
+      image: "/lovable-uploads/06339c5a-bf8b-4bad-b292-6cb933d72283.png",
+      title: "Baby Boy with Flying Toy",
       category: "kids",
-      description: "Children enjoying summer activities"
+      description: "Joyful baby boy playing with colorful flying toy"
     },
     {
       id: 38,
-      image: "https://images.unsplash.com/photo-1536640712-1e5ac2d36dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "School Age Portraits",
+      image: "/lovable-uploads/f2f96339-1c79-4df5-862d-2c017a551f94.png",
+      title: "First Birthday Celebration",
       category: "kids",
-      description: "Professional school-age children portraits"
+      description: "First birthday celebration with blue theme and cake smash"
     },
     {
       id: 39,
-      image: "https://images.unsplash.com/photo-1606791422814-b32c705e3e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Kids Creative Play",
+      image: "/lovable-uploads/7d85121f-1ea0-4edd-8cd6-47f2d9a562fb.png",
+      title: "Creative Kids Studio Setup",
       category: "kids",
-      description: "Children engaged in creative play activities"
+      description: "Professional kids photography with colorful backdrops and props"
     },
     {
       id: 40,
@@ -883,6 +882,7 @@ const Gallery = () => {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
