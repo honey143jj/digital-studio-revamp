@@ -1,5 +1,5 @@
 
-import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Mail, MapPin } from "lucide-react";
+import { Camera, Video, Palette, Globe, TrendingUp, Share2, Search, Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -11,6 +11,12 @@ const Footer = () => {
     { name: "Digital Marketing", path: "/digital-marketing", icon: TrendingUp },
     { name: "Social Media", path: "/social-media", icon: Share2 },
     { name: "SEO Services", path: "/seo-services", icon: Search },
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", url: "https://www.facebook.com/kgmi.net", icon: Facebook },
+    { name: "Instagram", url: "https://www.instagram.com/kgmidigitalstudio/", icon: Instagram },
+    { name: "YouTube", url: "https://www.youtube.com/@KGMIproductions", icon: Youtube },
   ];
 
   return (
@@ -27,7 +33,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Digital Studio & Creative Agency transforming ideas into stunning visual experiences.
             </p>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 mb-6">
               <div className="flex items-center space-x-2 text-gray-400">
                 <Phone className="h-4 w-4" />
                 <span>+91-9867226595</span>
@@ -39,6 +45,28 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
                 <span>81, shiv colony, Habib Marg, Gandhi Path W, Vaishali Nagar, Jaipur, Rajasthan 302021</span>
+              </div>
+            </div>
+            
+            {/* Social Media Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-purple-400 transition-colors p-2 rounded-full hover:bg-white/10"
+                      aria-label={social.name}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
