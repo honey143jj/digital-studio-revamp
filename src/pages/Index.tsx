@@ -347,11 +347,11 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-400">+1 (555) 123-4567</p>
+              <p className="text-gray-400">+91-9867226595</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-400">hello@kgmi.net</p>
+              <p className="text-gray-400">info@kgmi.net</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <h3 className="text-lg font-semibold text-white mb-2">Visit Studio</h3>

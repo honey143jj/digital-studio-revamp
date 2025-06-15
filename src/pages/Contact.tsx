@@ -9,19 +9,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+91-9867226595"],
       color: "from-blue-500 to-purple-600"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["hello@kgmi.net", "info@kgmi.net"],
+      details: ["info@kgmi.net"],
       color: "from-purple-500 to-pink-600"
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Creative Street", "Studio City, CA 91604"],
+      details: ["81, Shiv Colony, Vaishali Nagar", "Jaipur- 302021, Rajasthan, INDIA"],
       color: "from-pink-500 to-red-600"
     },
     {
@@ -212,7 +212,7 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
                       <p className="text-white font-medium">Address</p>
-                      <p className="text-gray-400">123 Creative Street<br />Studio City, CA 91604</p>
+                      <p className="text-gray-400">81, Shiv Colony, Vaishali Nagar<br />Jaipur- 302021, Rajasthan, INDIA</p>
                     </div>
                   </div>
                   
@@ -232,7 +232,7 @@ const Contact = () => {
                     <Phone className="w-5 h-5 text-purple-400 mt-1" />
                     <div>
                       <p className="text-white font-medium">Phone</p>
-                      <p className="text-gray-400">+1 (555) 123-4567</p>
+                      <p className="text-gray-400">+91-9867226595</p>
                     </div>
                   </div>
                 </div>

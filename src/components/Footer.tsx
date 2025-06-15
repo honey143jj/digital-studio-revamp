@@ -30,15 +30,15 @@ const Footer = () => {
             <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2 text-gray-400">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-9867226595</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <Mail className="h-4 w-4" />
-                <span>hello@kgmi.net</span>
+                <span>info@kgmi.net</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>123 Creative Street, Studio City</span>
+                <span>81, Shiv Colony, Vaishali Nagar, Jaipur- 302021</span>
               </div>
             </div>
           </div>

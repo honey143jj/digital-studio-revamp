@@ -373,7 +373,7 @@ const PhotoStudioRental = () => {
               <CardContent className="p-6 text-center">
                 <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <p className="text-gray-400">+91 (555) 123-4567</p>
+                <p className="text-gray-400">+91-9867226595</p>
               </CardContent>
             </Card>
 
@@ -381,7 +381,7 @@ const PhotoStudioRental = () => {
               <CardContent className="p-6 text-center">
                 <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <p className="text-gray-400">studio@kgmi.net</p>
+                <p className="text-gray-400">info@kgmi.net</p>
               </CardContent>
             </Card>
 
@@ -389,7 +389,7 @@ const PhotoStudioRental = () => {
               <CardContent className="p-6 text-center">
                 <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-400">123 Studio Street, Mumbai</p>
+                <p className="text-gray-400">81, Shiv Colony, Vaishali Nagar, Jaipur</p>
               </CardContent>
             </Card>
           </div>

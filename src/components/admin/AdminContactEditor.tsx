@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,8 +11,8 @@ const AdminContactEditor = () => {
   const { toast } = useToast();
   
   const [contactInfo, setContactInfo] = useState({
-    address: "123 Creative Street, Digital City, DC 12345",
-    phone: "+1 (555) 123-4567",
+    address: "81, Shiv Colony, Vaishali Nagar, Jaipur- 302021, Rajasthan, INDIA",
+    phone: "+91-9867226595",
     email: "info@kgmi.net",
     hours: "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM",
     description: "Get in touch with KGMI Digital Studio for all your creative needs. We're here to help bring your vision to life."
